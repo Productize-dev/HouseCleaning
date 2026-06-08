@@ -1,0 +1,136 @@
+import Image from "next/image";
+import Link from "next/link";
+import { MapPin, Phone } from "lucide-react";
+
+import { Separator } from "@/components/ui/separator";
+import { business, navLinks } from "@/lib/business";
+import { seoAreas } from "@/lib/seo/areas";
+import { seoServices } from "@/lib/seo/services";
+
+export function Footer() {
+  const year = new Date().getFullYear();
+
+  return (
+    <footer className="border-t border-primary/20 bg-gradient-to-br from-foreground to-[#0f1f1a] text-background">
+      <div className="container-narrow py-12 sm:py-14">
+        <div className="grid gap-10 lg:grid-cols-5">
+          <div className="lg:col-span-2">
+            <Image
+              src="/images/logo.png"
+              alt={business.name}
+              width={180}
+              height={54}
+              className="h-12 w-auto brightness-0 invert"
+            />
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-background/75">
+              Premium residential house cleaning based in Hales Corners, WI.
+              Serving homeowners across {business.serviceRegion} with quality you can
+              see and service you can trust.
+            </p>
+          </div>
+
+          <nav aria-label="Footer navigation">
+            <p className="text-sm font-semibold uppercase tracking-wider text-background/90">
+              Quick Links
+            </p>
+            <ul className="mt-4 space-y-2">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-background/70 transition-colors hover:text-fresh"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav aria-label="Cleaning services">
+            <p className="text-sm font-semibold uppercase tracking-wider text-background/90">
+              Services
+            </p>
+            <ul className="mt-4 space-y-2">
+              {seoServices.map((service) => (
+                <li key={service.slug}>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="text-sm text-background/70 transition-colors hover:text-fresh"
+                  >
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav aria-label="Service areas">
+            <p className="text-sm font-semibold uppercase tracking-wider text-background/90">
+              Areas
+            </p>
+            <ul className="mt-4 space-y-2">
+              {seoAreas.slice(0, 6).map((area) => (
+                <li key={area.slug}>
+                  <Link
+                    href={`/areas/${area.slug}`}
+                    className="text-sm text-background/70 transition-colors hover:text-fresh"
+                  >
+                    {area.city}, WI
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/areas"
+                  className="text-sm font-semibold text-fresh hover:underline"
+                >
+                  All service areas →
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wider text-background/90">
+              Contact
+            </p>
+            <ul className="mt-4 space-y-3 text-sm text-background/75">
+              <li>
+                <a
+                  href={business.phoneHref}
+                  className="inline-flex items-center gap-2 font-semibold text-background hover:text-fresh hover:underline"
+                >
+                  <Phone className="size-4" aria-hidden />
+                  {business.phone}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={business.emailHref}
+                  className="hover:text-fresh hover:underline"
+                >
+                  {business.email}
+                </a>
+              </li>
+              <li className="inline-flex gap-2">
+                <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden />
+                <span>{business.address.full}</span>
+              </li>
+              <li>{business.hours}</li>
+            </ul>
+          </div>
+        </div>
+
+        <Separator className="my-8 bg-background/20" />
+
+        <div className="flex flex-col items-center justify-between gap-4 text-center text-xs text-background/60 sm:flex-row sm:text-left">
+          <p>
+            © {year} {business.name}. All rights reserved.
+          </p>
+          <p>Residential house cleaning · Hales Corners, WI 53130</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
