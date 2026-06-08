@@ -7,30 +7,35 @@ import { FadeIn } from "@/components/motion/fade-in";
 import { cn } from "@/lib/utils";
 import { galleryItems, showcaseItems } from "@/lib/gallery";
 
-const ROOM_FILTERS = ["All", "Kitchen", "Bathroom", "Bedroom"] as const;
-type RoomFilter = (typeof ROOM_FILTERS)[number];
+const FILTERS = ["All", "Residential", "Commercial", "Kitchen", "Bathroom"] as const;
+type Filter = (typeof FILTERS)[number];
 
-function matchesFilter(id: string, filter: RoomFilter): boolean {
+function matchesFilter(
+  item: (typeof galleryItems)[number],
+  filter: Filter
+): boolean {
   if (filter === "All") return true;
+  if (filter === "Residential") return item.category !== "commercial";
+  if (filter === "Commercial") return item.category === "commercial";
   if (filter === "Kitchen")
-    return /kitchen|stove|range|sink|coffee|fridge|appliance/i.test(id);
-  if (filter === "Bathroom") return /tub|toilet|bath|shower/i.test(id);
-  if (filter === "Bedroom") return id.includes("bedroom");
+    return /kitchen|stove|range|sink|coffee|fridge|appliance/i.test(item.id);
+  if (filter === "Bathroom")
+    return /tub|toilet|bath|shower|urinal|commercial-toilet/i.test(item.id);
   return true;
 }
 
 export function GalleryGrid() {
-  const [filter, setFilter] = useState<RoomFilter>("All");
-  const filtered = galleryItems.filter((item) => matchesFilter(item.id, filter));
+  const [filter, setFilter] = useState<Filter>("All");
+  const filtered = galleryItems.filter((item) => matchesFilter(item, filter));
 
   return (
     <>
       <div
         role="tablist"
-        aria-label="Filter by room"
+        aria-label="Filter gallery"
         className="mt-10 flex flex-wrap justify-center gap-2"
       >
-        {ROOM_FILTERS.map((f) => (
+        {FILTERS.map((f) => (
           <button
             key={f}
             type="button"
@@ -40,7 +45,7 @@ export function GalleryGrid() {
             className={cn(
               "rounded-full px-5 py-2.5 text-sm font-semibold transition-all",
               filter === f
-                ? "bg-gradient-to-r from-primary to-fresh text-white shadow-md"
+                ? "bg-primary text-white shadow-md"
                 : "border border-border bg-white text-muted-foreground hover:border-primary/40 hover:text-foreground"
             )}
           >
@@ -53,8 +58,15 @@ export function GalleryGrid() {
         {filtered.map((item, index) => (
           <FadeIn key={item.id} delay={index * 0.05}>
             <article className="group overflow-hidden rounded-3xl border border-border bg-card shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-card-hover)]">
-              <div className="border-b border-border bg-gradient-to-r from-secondary/80 to-white px-5 py-4">
-                <h3 className="font-semibold">{item.title}</h3>
+              <div className="border-b border-border bg-secondary/30 px-5 py-4">
+                <div className="flex items-center justify-between gap-2">
+                  <h3 className="font-semibold">{item.title}</h3>
+                  {item.category === "commercial" && (
+                    <span className="rounded-md bg-brand/10 px-2 py-0.5 text-xs font-semibold text-brand">
+                      Commercial
+                    </span>
+                  )}
+                </div>
                 <p className="text-sm text-muted-foreground">{item.location}</p>
               </div>
               <div className="grid grid-cols-2 gap-px bg-border">

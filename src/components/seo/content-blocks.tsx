@@ -61,7 +61,7 @@ export function ContentBlocks({
       {benefits && benefits.length > 0 && (
         <section className="mt-12" aria-labelledby="benefits-heading">
           <h2 id="benefits-heading" className="text-2xl font-semibold">
-            Why homeowners choose us
+            Why clients choose us
           </h2>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2">
             {benefits.map((item) => (

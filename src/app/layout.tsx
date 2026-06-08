@@ -25,9 +25,9 @@ const outfit = Outfit({
 });
 
 const title =
-  "House Cleaning Hales Corners WI | Fresh Cleaning Place LLC";
+  "Cleaning Services Hales Corners WI | Fresh Cleaning Place LLC";
 const description =
-  "Premium residential house cleaning in Hales Corners, Milwaukee County & surrounding areas. Deep cleaning, biweekly plans, organizing & free estimates. Call (414) 491-5526.";
+  "Residential & commercial cleaning in Hales Corners, Milwaukee County & surrounding areas. House cleaning, offices, deep cleans & free estimates. Call (414) 491-5526.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -42,7 +42,8 @@ export const metadata: Metadata = {
     "maid service Greenfield WI",
     "deep cleaning West Allis",
     "home cleaning Milwaukee County",
-    "house cleaning surrounding areas WI",
+    "commercial cleaning Hales Corners WI",
+    "office cleaning Milwaukee County",
     "biweekly house cleaning",
     "house cleaning near me",
     "Fresh Cleaning Place LLC",

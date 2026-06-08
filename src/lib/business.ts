@@ -2,7 +2,7 @@ export const business = {
   name: "Fresh Cleaning Place LLC",
   shortName: "Fresh Cleaning Place",
   tagline:
-    "Premium residential house cleaning in Hales Corners, Milwaukee County and surrounding areas",
+    "Residential and commercial cleaning in Hales Corners, Milwaukee County and surrounding areas",
   phone: "(414) 491-5526",
   phoneHref: "tel:+14144915526",
   email: "freshcleaning75@gmail.com",
@@ -19,12 +19,11 @@ export const business = {
     latitude: 42.948457,
     longitude: -88.05593,
   },
-  owner: "Jacky",
   hours: "Mon–Sat: 8:00 AM – 6:00 PM",
-  foundedNote: "Trusted by neighbors across Milwaukee County and surrounding areas",
+  foundedNote: "Trusted by neighbors and businesses across Milwaukee County and surrounding areas",
   serviceRegion: "Milwaukee County and surrounding areas",
   serviceRegionShort: "Milwaukee County & surroundings",
-  promo: "20% OFF your first home cleaning — new clients",
+  promo: "20% OFF your first cleaning — new clients",
   nextdoorUrl:
     "https://nextdoor.com/page/fresh-cleaning-greenfield-wi",
   satisfaction: "100% satisfaction guaranteed on every visit",
@@ -65,7 +64,7 @@ export const trustPoints = [
   },
   {
     title: "Flexible Plans",
-    description: "Weekly, biweekly, monthly, or one-time deep cleans",
+    description: "Residential & commercial — weekly, biweekly, or one-time",
     icon: "calendar" as const,
   },
 ] as const;
@@ -73,9 +72,9 @@ export const trustPoints = [
 export const processSteps = [
   {
     step: "01",
-    title: "Free Home Estimate",
+    title: "Free Estimate",
     description:
-      "Call or email us about your home. We'll recommend the right cleaning plan for your space and schedule.",
+      "Call or email us about your home or business. We'll recommend the right cleaning plan for your space and schedule.",
   },
   {
     step: "02",
@@ -85,15 +84,15 @@ export const processSteps = [
   },
   {
     step: "03",
-    title: "Expert Home Clean",
+    title: "Expert Clean",
     description:
-      "Jacky and her crew arrive on time with supplies, cleaning every room with meticulous care.",
+      "Our crew arrives on time with supplies, cleaning every room with meticulous care.",
   },
   {
     step: "04",
-    title: "Enjoy Your Fresh Home",
+    title: "Enjoy the Results",
     description:
-      "Walk into a spotless, fresh-smelling home. Recurring clients get the same trusted team every visit.",
+      "Walk into a spotless, fresh-smelling space. Recurring clients get the same trusted team every visit.",
   },
 ] as const;
 
@@ -112,7 +111,7 @@ export const serviceAreas = [
   "Milwaukee",
 ] as const;
 
-export const services = [
+export const residentialServices = [
   {
     title: "Regular House Cleaning",
     description:
@@ -164,16 +163,50 @@ export const services = [
   },
 ] as const;
 
+export const commercialServices = [
+  {
+    title: "Office Cleaning",
+    description:
+      "Regular maintenance for offices, workspaces, and common areas — professional results on your schedule.",
+    keywords: "office cleaning, commercial cleaning Hales Corners",
+    featured: true,
+  },
+  {
+    title: "Commercial Restroom Cleaning",
+    description:
+      "Deep sanitization of restrooms, urinals, stalls, and fixtures for offices, retail, and facilities.",
+    keywords: "commercial restroom cleaning, bathroom sanitization",
+    featured: true,
+  },
+  {
+    title: "Retail & Small Business",
+    description:
+      "Keep your storefront, break room, and customer areas spotless — flexible before-hours or after-hours visits.",
+    keywords: "retail cleaning, small business cleaning",
+    featured: false,
+  },
+  {
+    title: "Commercial Deep Cleaning",
+    description:
+      "One-time or periodic deep cleans for move-ins, post-construction, or facilities needing extra attention.",
+    keywords: "commercial deep cleaning",
+    featured: false,
+  },
+] as const;
+
+/** All services — residential first, then commercial */
+export const services = [...residentialServices, ...commercialServices] as const;
+
 export const testimonials = [
   {
     quote:
-      "I highly recommend Fresh Cleaning Place LLC. I have been using them for years for a monthly cleaning. Jacky's crew is amazing — very high work ethics and outstanding communication.",
+      "I highly recommend Fresh Cleaning Place LLC. I have been using them for years for a monthly cleaning. The crew is amazing — very high work ethics and outstanding communication.",
     author: "J. B.",
     location: "Muskego, WI",
   },
   {
     quote:
-      "Jacky is professional, timely, and friendly. Her deep cleaning left our home spotless and smelling fresh. Affordable, reliable, and great communication from start to finish.",
+      "Professional, timely, and friendly. The deep cleaning left our home spotless and smelling fresh. Affordable, reliable, and great communication from start to finish.",
     author: "Verified Nextdoor neighbor",
     location: "Hales Corners area",
   },
@@ -195,7 +228,7 @@ export const values = [
   {
     title: "Quality You Can See",
     description:
-      "Meticulous attention to kitchens, bathrooms, and every living space",
+      "Meticulous attention to every room — homes, offices, and commercial spaces",
   },
   {
     title: "Reliability",
@@ -204,7 +237,7 @@ export const values = [
   {
     title: "Trust & Respect",
     description:
-      "Your home treated with care — loyalty and responsibility every visit",
+      "Your property treated with care — loyalty and responsibility every visit",
   },
 ] as const;
 

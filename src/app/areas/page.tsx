@@ -11,7 +11,7 @@ import { absoluteUrl } from "@/lib/seo/pages";
 
 export const metadata: Metadata = {
   title: `House Cleaning Service Areas | ${business.serviceRegionShort}`,
-  description: `Residential house cleaning in ${business.serviceRegion}. Hales Corners, Greenfield, West Allis, Muskego & more. Call ${business.phone}.`,
+  description: `Residential & commercial cleaning in ${business.serviceRegion}. Hales Corners, Greenfield, West Allis, Muskego & more. Call ${business.phone}.`,
   alternates: { canonical: absoluteUrl("/areas") },
 };
 
@@ -21,7 +21,7 @@ export default function AreasIndexPage() {
       <PageHero
         eyebrow="Service Areas"
         title={`House Cleaning in ${business.serviceRegionShort}`}
-        description={`Based at ${business.address.full}, we travel throughout ${business.serviceRegion} for residential house cleaning — weekly, deep cleans, and organizing.`}
+        description={`Based at ${business.address.full}, we travel throughout ${business.serviceRegion} for residential and commercial cleaning.`}
       />
       <div className="container-narrow py-12 sm:py-16">
         <Breadcrumbs

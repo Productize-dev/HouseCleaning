@@ -41,7 +41,7 @@ export function TrustBar() {
 
         <FadeIn className="mt-10 text-center" delay={0.3}>
           <p className="text-sm text-muted-foreground">
-            Residential house cleaning · {business.address.city} &amp;{" "}
+            Residential &amp; commercial cleaning · {business.address.city} &amp;{" "}
             {business.serviceRegionShort} ·{" "}
             <a
               href={business.nextdoorUrl}

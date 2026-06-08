@@ -11,7 +11,7 @@ import { seoServices } from "@/lib/seo/services";
 
 export const metadata: Metadata = {
   title: "House Cleaning Services | Hales Corners WI",
-  description: `Residential cleaning services — regular, deep, kitchen, bathroom, windows & organizing. ${business.shortName} serves ${business.serviceRegion}. Call ${business.phone}.`,
+  description: `Residential & commercial cleaning — regular, deep, kitchen, bathroom, offices & restrooms. ${business.shortName} serves ${business.serviceRegion}. Call ${business.phone}.`,
   alternates: { canonical: absoluteUrl("/services") },
 };
 
@@ -20,8 +20,8 @@ export default function ServicesIndexPage() {
     <SeoShell>
       <PageHero
         eyebrow="All Services"
-        title="Residential House Cleaning Services"
-        description={`Every service is designed for homes in Hales Corners and ${business.serviceRegion} — from weekly maintenance to deep cleans and organizing.`}
+        title="Residential & Commercial Cleaning Services"
+        description={`Homes and businesses in Hales Corners and ${business.serviceRegion} — routine maintenance, deep cleans, organizing, and commercial facilities.`}
       />
       <div className="container-narrow py-12 sm:py-16">
         <Breadcrumbs

@@ -10,30 +10,30 @@ import { business, serviceAreas } from "@/lib/business";
 const faqs = [
   {
     question: "What areas does Fresh Cleaning Place serve?",
-    answer: `We provide residential house cleaning throughout ${business.serviceRegion} — including Hales Corners, Greenfield, West Allis, Muskego, ${serviceAreas.slice(6).join(", ")}, and nearby communities.`,
+    answer: `We provide residential and commercial cleaning throughout ${business.serviceRegion} — including Hales Corners, Greenfield, West Allis, Muskego, ${serviceAreas.slice(6).join(", ")}, and nearby communities.`,
+  },
+  {
+    question: "Do you offer both residential and commercial cleaning?",
+    answer:
+      "Yes. We clean homes, offices, retail spaces, and commercial restrooms. Many clients use us for recurring house cleaning; we also serve small businesses and office facilities.",
   },
   {
     question: "Do you bring your own cleaning supplies?",
     answer:
-      "Yes. Our professional crews arrive with their own tools and cleaning products for every home visit, including deep cleans and basement specialty jobs.",
+      "Yes. Our professional crews arrive with their own tools and cleaning products for every visit — residential deep cleans, commercial restrooms, and specialty jobs included.",
   },
   {
     question: "How do I get a cleaning estimate?",
-    answer: `Call ${business.phone} or email ${business.email} for a free estimate. We offer regular house cleaning, deep cleaning, window cleaning, and home organizing with flexible scheduling.`,
+    answer: `Call ${business.phone} or email ${business.email} for a free estimate. We offer house cleaning, commercial cleaning, deep cleaning, window cleaning, and home organizing with flexible scheduling.`,
   },
   {
-    question: "Do you offer recurring house cleaning?",
+    question: "Do you offer recurring cleaning?",
     answer:
-      "Yes. We offer weekly, biweekly, and monthly plans with consistent crews and outstanding communication — many clients have used us for years.",
+      "Yes. We offer weekly, biweekly, and monthly plans for homes and businesses with consistent crews and outstanding communication.",
   },
   {
     question: "Is there a discount for first-time customers?",
     answer: business.promo,
-  },
-  {
-    question: "Do you offer home organizing and decluttering?",
-    answer:
-      "Yes. We provide customized organizing solutions to transform cluttered spaces into calm, functional rooms — with our 100% satisfaction guarantee.",
   },
 ] as const;
 
@@ -48,8 +48,8 @@ export function Faq() {
         <SectionHeader
           id="faq-heading"
           eyebrow="FAQ"
-          title="Common Questions About House Cleaning"
-          description={`Answers for homeowners searching for residential cleaning in Hales Corners, ${business.serviceRegion}.`}
+          title="Common Questions About Our Cleaning Services"
+          description={`Answers for homeowners and businesses searching for cleaning services in Hales Corners and ${business.serviceRegion}.`}
         />
 
         <Accordion className="mt-12 overflow-hidden rounded-3xl border border-border bg-card px-6 shadow-[var(--shadow-card)]">

@@ -6,6 +6,7 @@ export type GalleryItem = {
   after: string;
   altBefore: string;
   altAfter: string;
+  category?: "residential" | "commercial";
 };
 
 export type ShowcaseItem = {
@@ -118,6 +119,26 @@ export const galleryItems: GalleryItem[] = [
     after: "/images/gallery/bedroom-after.png",
     altBefore: "Messy bedroom before house cleaning",
     altAfter: "Tidy bedroom after Fresh Cleaning Place",
+  },
+  {
+    id: "commercial-toilet",
+    title: "Commercial Restroom",
+    location: "Office facility",
+    before: "/images/gallery/commercial-toilet-before.png",
+    after: "/images/gallery/commercial-toilet-after.png",
+    altBefore: "Commercial restroom before professional cleaning",
+    altAfter: "Sanitized commercial restroom after Fresh Cleaning Place",
+    category: "commercial",
+  },
+  {
+    id: "commercial-urinal",
+    title: "Urinal Deep Clean",
+    location: "Commercial bathroom",
+    before: "/images/gallery/urinal-before.png",
+    after: "/images/gallery/urinal-after.png",
+    altBefore: "Stained commercial urinal before cleaning",
+    altAfter: "Spotless urinal after commercial restroom cleaning",
+    category: "commercial",
   },
 ];
 

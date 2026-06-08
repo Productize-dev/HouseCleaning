@@ -19,7 +19,7 @@ export const seoServices: SeoServicePage[] = [
       "Weekly, biweekly & monthly house cleaning in Hales Corners, Milwaukee County & surroundings. Reliable crews, supplies included. Free estimate — call (414) 491-5526.",
     h1: "Regular House Cleaning in Hales Corners, Milwaukee County & surroundings",
     intro:
-      "Keep your home consistently fresh with recurring house cleaning from Fresh Cleaning Place LLC. Led by Jacky, our residential team handles kitchens, bathrooms, bedrooms, and living areas on a schedule that fits your life — weekly, biweekly, or monthly.",
+      "Keep your home consistently fresh with recurring house cleaning from Fresh Cleaning Place LLC. Our residential team handles kitchens, bathrooms, bedrooms, and living areas on a schedule that fits your life — weekly, biweekly, or monthly.",
     includes: [
       "Kitchen counters, sinks, and appliance exteriors",
       "Bathroom sinks, toilets, mirrors, and showers",
@@ -88,7 +88,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Kitchen & Appliance Cleaning",
     metaTitle: "Kitchen Cleaning Hales Corners WI",
     metaDescription:
-      "Professional kitchen & appliance cleaning — stoves, sinks, fridges & more in Hales Corners, Milwaukee County & surroundings. Residential only. (414) 491-5526.",
+      "Professional kitchen & appliance cleaning — stoves, sinks, fridges & more in Hales Corners, Milwaukee County & surroundings. Homes & businesses. (414) 491-5526.",
     h1: "Kitchen & Appliance Cleaning for Milwaukee County & Surrounding Areas",
     intro:
       "Kitchens are the heart of the home — and the hardest-working room to keep clean. Fresh Cleaning Place restores stovetops, sinks, countertops, and appliances so your cooking space looks and feels sanitary again.",
@@ -260,6 +260,78 @@ export const seoServices: SeoServicePage[] = [
         question: "Can organizing be combined with cleaning?",
         answer:
           "Yes. Many clients book organize + clean visits for a full home refresh.",
+      },
+    ],
+  },
+  {
+    slug: "commercial-cleaning",
+    title: "Commercial Cleaning",
+    metaTitle: "Commercial Cleaning Hales Corners WI",
+    metaDescription:
+      "Office & commercial cleaning in Hales Corners, Milwaukee County & surroundings. Restrooms, workspaces, retail. Free estimate — call (414) 491-5526.",
+    h1: "Commercial Cleaning Services in Milwaukee County",
+    intro:
+      "Fresh Cleaning Place LLC keeps offices, retail spaces, and commercial facilities clean and professional. Flexible scheduling — before hours, after hours, or during slow periods — with supplies included.",
+    includes: [
+      "Office desks, common areas, and break rooms",
+      "Floors vacuumed and mopped",
+      "Trash removal and surface sanitizing",
+      "Restroom cleaning and restocking (on request)",
+      "Retail storefront and customer areas",
+      "Professional supplies brought to every visit",
+    ],
+    benefits: [
+      "Reliable crews for recurring commercial accounts",
+      "Flexible scheduling around your business hours",
+      "Same attention to detail as our residential service",
+      "100% satisfaction guaranteed",
+    ],
+    faqs: [
+      {
+        question: "Do you clean offices and small businesses?",
+        answer:
+          "Yes. We serve offices, retail shops, and small commercial facilities throughout Milwaukee County and surrounding areas.",
+      },
+      {
+        question: "Can you clean outside of business hours?",
+        answer:
+          "Yes. We offer flexible scheduling including early morning, evening, and weekend visits when needed.",
+      },
+    ],
+  },
+  {
+    slug: "commercial-restroom-cleaning",
+    title: "Commercial Restroom Cleaning",
+    metaTitle: "Commercial Restroom Cleaning Milwaukee WI",
+    metaDescription:
+      "Commercial restroom & bathroom sanitization in Hales Corners & Milwaukee County. Offices, retail & facilities. Call (414) 491-5526.",
+    h1: "Commercial Restroom Cleaning & Sanitization",
+    intro:
+      "Restrooms make a lasting impression on employees and customers. Our commercial restroom service targets urinals, stalls, fixtures, tile, and floors for a sanitary, professional finish.",
+    includes: [
+      "Toilets, urinals, and stall sanitization",
+      "Sinks, mirrors, and fixture polishing",
+      "Tile, grout, and floor mopping",
+      "Soap and paper restocking (on request)",
+      "Odor control and disinfecting",
+      "Scheduled or one-time deep cleans",
+    ],
+    benefits: [
+      "Ideal for offices, retail, and multi-stall facilities",
+      "Handles tough buildup and high-traffic wear",
+      "Pairs with full commercial cleaning plans",
+      "Professional-grade products included",
+    ],
+    faqs: [
+      {
+        question: "Do you service multi-stall commercial restrooms?",
+        answer:
+          "Yes. We clean single and multi-stall restrooms in offices, retail locations, and commercial buildings.",
+      },
+      {
+        question: "Can restroom cleaning be added to office cleaning?",
+        answer:
+          "Absolutely. Most commercial clients include restrooms in their regular cleaning schedule.",
       },
     ],
   },

@@ -15,7 +15,7 @@ export function Gallery() {
           id="gallery-heading"
           eyebrow="Our Work"
           title="Before & After — Real Home Results"
-          description={`Photos from actual residential jobs across ${business.serviceRegion}.`}
+          description="Photos from actual residential and commercial jobs across Milwaukee County."
         />
         <GalleryGrid />
       </div>

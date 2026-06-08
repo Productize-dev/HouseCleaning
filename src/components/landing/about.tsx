@@ -20,14 +20,14 @@ export function About() {
               align="left"
               eyebrow="About Us"
               title={`Meet ${business.shortName}`}
-              description={`Based at ${business.address.full}, we are a locally owned residential cleaning company built on quality, reliability, and respect for every home we serve.`}
+              description={`Based at ${business.address.full}, we are a locally owned cleaning company serving homes and businesses with quality, reliability, and respect for every property we care for.`}
             />
 
             <div className="mt-8 space-y-4 text-muted-foreground">
               <p className="leading-relaxed">
-                {business.name} is led by {business.owner} and a dedicated crew
-                known across {business.serviceRegion} for thorough, energetic work and
-                outstanding communication — house cleaning only.
+                {business.name} is a dedicated local crew known across{" "}
+                {business.serviceRegion} for thorough work and outstanding
+                communication — residential and commercial.
               </p>
               <p className="leading-relaxed">
                 Our mission is simple: deliver guaranteed satisfaction on every

@@ -23,9 +23,9 @@ export function Footer() {
               className="h-12 w-auto brightness-0 invert"
             />
             <p className="mt-4 max-w-md text-sm leading-relaxed text-background/75">
-              Premium residential house cleaning based in Hales Corners, WI.
-              Serving homeowners across {business.serviceRegion} with quality you can
-              see and service you can trust.
+              Premium residential and commercial cleaning based in Hales Corners,
+              WI. Serving homes and businesses across {business.serviceRegion}{" "}
+              with quality you can see and service you can trust.
             </p>
           </div>
 
@@ -128,7 +128,7 @@ export function Footer() {
           <p>
             © {year} {business.name}. All rights reserved.
           </p>
-          <p>Residential house cleaning · Hales Corners, WI 53130</p>
+          <p>Residential &amp; commercial cleaning · Hales Corners, WI 53130</p>
         </div>
       </div>
     </footer>

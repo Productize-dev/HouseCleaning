@@ -119,7 +119,7 @@ export function servicePageJsonLd(params: {
       "@type": "State",
       name: "Wisconsin",
     },
-    serviceType: "Residential house cleaning",
+    serviceType: "Residential and commercial cleaning",
   };
 }
 
@@ -163,21 +163,26 @@ export function faqJsonLd() {
   const faqs = [
     {
       question: "What areas does Fresh Cleaning Place serve?",
-      answer: `We provide residential house cleaning throughout ${business.serviceRegion} — including Hales Corners, Greenfield, West Allis, Muskego, ${serviceAreas.slice(6).join(", ")}, and nearby communities.`,
+      answer: `We provide residential and commercial cleaning throughout ${business.serviceRegion} — including Hales Corners, Greenfield, West Allis, Muskego, ${serviceAreas.slice(6).join(", ")}, and nearby communities.`,
+    },
+    {
+      question: "Do you offer commercial cleaning?",
+      answer:
+        "Yes. We clean offices, retail spaces, and commercial restrooms throughout Milwaukee County and surrounding areas.",
     },
     {
       question: "Do you bring your own cleaning supplies?",
       answer:
-        "Yes. Our professional crews arrive with their own tools and cleaning products for every home visit, including deep cleans and specialty rooms including basement deep cleans.",
+        "Yes. Our professional crews arrive with their own tools and cleaning products for every home and business visit, including deep cleans and commercial restroom service.",
     },
     {
       question: "How do I get a cleaning estimate?",
-      answer: `Call ${business.phone} for a free estimate. We offer regular house cleaning, deep cleaning, window cleaning, and home organizing with flexible scheduling.`,
+      answer: `Call ${business.phone} for a free estimate. We offer house cleaning, commercial cleaning, deep cleaning, window cleaning, and home organizing with flexible scheduling.`,
     },
     {
       question: "Does Fresh Cleaning Place offer recurring cleaning?",
       answer:
-        "Yes. We offer weekly, biweekly, and monthly house cleaning plans with consistent crews and outstanding communication.",
+        "Yes. We offer weekly, biweekly, and monthly cleaning plans for homes and businesses with consistent crews and outstanding communication.",
     },
   ];
 

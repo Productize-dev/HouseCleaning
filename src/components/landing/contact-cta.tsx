@@ -43,12 +43,11 @@ export function ContactCta() {
                   id="contact-heading"
                   className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl"
                 >
-                  Ready for a Spotless Home?
+                  Ready for a Spotless Home or Office?
                 </h2>
                 <p className="mt-4 text-lg text-primary-foreground/90">
-                  Call today for a free residential estimate —{" "}
-                  {business.owner}&apos;s team serves Hales Corners,{" "}
-                  {business.serviceRegion}.
+                  Call today for a free estimate — serving homes and businesses
+                across Hales Corners and {business.serviceRegion}.
                 </p>
               </div>
 

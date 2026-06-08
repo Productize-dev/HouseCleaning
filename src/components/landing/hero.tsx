@@ -19,7 +19,7 @@ import { stockImages } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 const highlights = [
-  "Residential house cleaning only",
+  "Residential & commercial cleaning",
   "Weekly, biweekly & monthly plans",
   "Deep cleans & home organizing",
   "Supplies & tools included",
@@ -81,7 +81,7 @@ export function Hero() {
             >
               <span className="block text-[2.65rem] font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.5rem]">
                 Premium{" "}
-                <span className="hero-headline-accent">House Cleaning</span>
+                <span className="hero-headline-accent">Cleaning Services</span>
               </span>
               <span className="mt-4 block border-t border-border pt-4 text-lg font-normal leading-relaxed text-muted-foreground sm:text-xl">
                 Trusted by families across{" "}
@@ -98,25 +98,27 @@ export function Hero() {
               className="hero-lead-block mt-8 border-l-4 border-l-primary pl-5 sm:pl-6"
             >
               <p className="text-lg font-semibold leading-snug text-foreground sm:text-xl">
-                Spotless homes, zero stress — supplies included on every visit.
+                Spotless homes and businesses — supplies included on every visit.
               </p>
               <p className="mt-3 text-base leading-relaxed text-muted-foreground">
                 {business.name} serves {business.serviceRegion} with thorough
-                residential cleaning led by {business.owner}. Same trusted crew,
-                clear communication, and results you can see from the moment
-                you walk in.
+                residential and commercial cleaning. Same trusted crew, clear
+                communication, and results you can see from the moment you walk
+                in.
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
-                {["Residential only", "Free estimates", "Satisfaction guaranteed"].map(
-                  (tag) => (
+                {[
+                  "Homes & offices",
+                  "Free estimates",
+                  "Satisfaction guaranteed",
+                ].map((tag) => (
                     <span
                       key={tag}
                       className="rounded-md border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-foreground"
                     >
                       {tag}
                     </span>
-                  )
-                )}
+                ))}
               </div>
             </motion.div>
 

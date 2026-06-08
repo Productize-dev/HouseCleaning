@@ -31,7 +31,7 @@ export function WhyUs() {
               align="left"
               eyebrow="Why Fresh Cleaning Place"
               title="A Local Team You Can Count On"
-              description={`Led by ${business.owner}, we've built our reputation in Hales Corners and ${business.serviceRegion} on thorough residential work, honest communication, and homes that truly feel fresh.`}
+              description={`We've built our reputation in Hales Corners and ${business.serviceRegion} on thorough residential and commercial work, honest communication, and spaces that truly feel fresh.`}
             />
 
             <StaggerChildren className="mt-10 space-y-4">
@@ -56,8 +56,8 @@ export function WhyUs() {
             </StaggerChildren>
 
             <p className="mt-8 text-sm font-medium text-muted-foreground">
-              Residential house cleaning only — no offices, no commercial
-              contracts.
+              Residential homes and commercial spaces — offices, retail, and
+              facilities throughout {business.serviceRegionShort}.
             </p>
           </FadeIn>
 

@@ -1,4 +1,9 @@
-/** Professional stock photography for marketing sections */
+export type StockImage = {
+  src: string;
+  alt: string;
+};
+
+/** Residential marketing photography */
 export const stockImages = {
   bedroomCleaning: {
     src: "/images/stock/bedroom-cleaning.png",
@@ -14,28 +19,66 @@ export const stockImages = {
   },
   suppliesCaddy: {
     src: "/images/stock/supplies-caddy.png",
-    alt: "Premium residential cleaning supplies organized in a professional caddy",
+    alt: "Premium cleaning supplies organized in a professional caddy",
   },
   livingRoomDetail: {
     src: "/images/stock/living-room-detail.png",
     alt: "Cleaner carefully dusting and wiping surfaces in a modern living room",
   },
-} as const;
+} as const satisfies Record<string, StockImage>;
+
+/** Commercial cleaning photography */
+export const commercialImages = {
+  officeWindows: {
+    src: "/images/stock/commercial/office-windows.png",
+    alt: "Commercial window cleaner servicing large office building glass with professional equipment",
+  },
+  teamWalkway: {
+    src: "/images/stock/commercial/team-walkway.png",
+    alt: "Uniformed commercial cleaning crew maintaining a modern office walkway",
+  },
+  exteriorWindows: {
+    src: "/images/stock/commercial/exterior-windows.png",
+    alt: "Professional exterior window cleaning at a commercial property",
+  },
+  restaurantFloor: {
+    src: "/images/stock/commercial/restaurant-floor.png",
+    alt: "Commercial floor cleaning in a restaurant after hours with professional mop equipment",
+  },
+  professionalCrew: {
+    src: "/images/stock/commercial/professional-crew.png",
+    alt: "Professional commercial cleaning team in uniform with vacuum and equipment",
+  },
+  windowSpecialist: {
+    src: "/images/stock/commercial/window-specialist.png",
+    alt: "Specialized commercial window cleaning with professional safety equipment",
+  },
+} as const satisfies Record<string, StockImage>;
 
 export const showcaseItems = [
   {
     ...stockImages.mirrorDetail,
-    label: "Streak-free detail",
-    caption: "Mirrors, glass & fixtures",
+    label: "Residential detail",
+    caption: "Homes & living spaces",
   },
   {
-    ...stockImages.suppliesCaddy,
-    label: "Supplies included",
-    caption: "Professional-grade products",
+    ...commercialImages.teamWalkway,
+    label: "Commercial crews",
+    caption: "Offices & facilities",
   },
   {
-    ...stockImages.livingRoomDetail,
-    label: "Every surface",
-    caption: "Living rooms & bedrooms",
+    ...commercialImages.officeWindows,
+    label: "Business cleaning",
+    caption: "Windows & storefronts",
   },
+] as const;
+
+export const commercialFeaturedImages = [
+  commercialImages.officeWindows,
+  commercialImages.teamWalkway,
+] as const;
+
+export const commercialSecondaryImages = [
+  commercialImages.restaurantFloor,
+  commercialImages.windowSpecialist,
 ] as const;

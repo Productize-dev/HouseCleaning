@@ -22,14 +22,14 @@ export function ServiceAreas() {
               id="areas-heading"
               align="left"
               eyebrow="Service Areas"
-              title="House Cleaning in Milwaukee County & Surroundings"
-              description={`Locally based at ${business.address.street}, we proudly serve homeowners throughout ${business.serviceRegion}.`}
+              title="Cleaning Services in Milwaukee County & Surroundings"
+              description={`Locally based at ${business.address.street}, we proudly serve homes and businesses throughout ${business.serviceRegion}.`}
             />
 
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Whether you need biweekly house cleaning in Hales Corners, a deep
-              clean in West Allis, or organizing help in Muskego, our crews
-              travel throughout {business.serviceRegion} with the same
+              Whether you need biweekly house cleaning in Hales Corners, office
+              cleaning in Greenfield, or commercial restroom service in Muskego,
+              our crews travel throughout {business.serviceRegion} with the same
               attention to detail neighbors recommend on Nextdoor.
             </p>
           </FadeIn>

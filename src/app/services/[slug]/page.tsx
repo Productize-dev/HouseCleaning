@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { PageHero } from "@/components/seo/page-hero";
 import { SeoShell } from "@/components/seo/seo-shell";
 import { business } from "@/lib/business";
+import { commercialImages } from "@/lib/images";
 import { getOtherAreas } from "@/lib/seo/areas";
 import { absoluteUrl } from "@/lib/seo/pages";
 import {
@@ -21,6 +22,16 @@ import {
 } from "@/lib/structured-data";
 
 type PageProps = { params: Promise<{ slug: string }> };
+
+const commercialSlugs = new Set([
+  "commercial-cleaning",
+  "commercial-restroom-cleaning",
+]);
+
+const serviceHeroImages: Record<string, { src: string; alt: string }> = {
+  "commercial-cleaning": commercialImages.teamWalkway,
+  "commercial-restroom-cleaning": commercialImages.professionalCrew,
+};
 
 export function generateStaticParams() {
   return getAllServiceSlugs().map((slug) => ({ slug }));
@@ -80,9 +91,12 @@ export default async function ServicePage({ params }: PageProps) {
     <SeoShell>
       <JsonLd data={jsonLd} />
       <PageHero
-        eyebrow="Residential Service"
+        eyebrow={
+          commercialSlugs.has(slug) ? "Commercial Service" : "Residential Service"
+        }
         title={service.h1}
         description={service.intro}
+        image={serviceHeroImages[slug]}
       />
       <div className="container-narrow -mt-4 pb-4">
         <Breadcrumbs
@@ -94,7 +108,7 @@ export default async function ServicePage({ params }: PageProps) {
         />
       </div>
       <ContentBlocks
-        intro={`${business.shortName} proudly serves homeowners in ${business.address.city} and across ${business.serviceRegion}. ${service.intro}`}
+        intro={`${business.shortName} proudly serves homes and businesses in ${business.address.city} and across ${business.serviceRegion}. ${service.intro}`}
         includes={service.includes}
         benefits={service.benefits}
         faqs={service.faqs}
