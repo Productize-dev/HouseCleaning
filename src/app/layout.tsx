@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 
+import { ChatbaseWidget } from "@/components/chatbase/chatbase-widget";
 import { business, siteUrl } from "@/lib/business";
 import {
   faqJsonLd,
@@ -113,6 +114,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <ChatbaseWidget />
       </body>
     </html>
   );

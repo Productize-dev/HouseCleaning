@@ -15,13 +15,15 @@ export function Footer() {
       <div className="container-narrow py-12 sm:py-14">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
           <div className="sm:col-span-2 lg:col-span-2">
-            <Image
-              src="/images/logo.png"
-              alt={business.name}
-              width={180}
-              height={54}
-              className="h-12 w-auto brightness-0 invert"
-            />
+            <div className="inline-flex rounded-xl bg-white p-2 shadow-sm">
+              <Image
+                src="/images/logo.png"
+                alt={business.name}
+                width={578}
+                height={578}
+                className="h-14 w-14 object-contain sm:h-16 sm:w-16"
+              />
+            </div>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-background/75">
               Premium residential and commercial cleaning based in Hales Corners,
               WI. Serving homes and businesses across {business.serviceRegion}{" "}

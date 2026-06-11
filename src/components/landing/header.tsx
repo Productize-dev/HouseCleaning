@@ -43,9 +43,9 @@ export function Header() {
             <Image
               src="/images/logo.png"
               alt={business.name}
-              width={160}
-              height={48}
-              className="h-10 w-auto shrink-0 object-contain sm:h-11"
+              width={578}
+              height={578}
+              className="h-11 w-11 shrink-0 object-contain sm:h-12 sm:w-12"
               priority
             />
           </Link>

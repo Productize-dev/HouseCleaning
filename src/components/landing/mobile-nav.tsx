@@ -33,9 +33,9 @@ export function MobileNav() {
           <Image
             src="/images/logo.png"
             alt={business.name}
-            width={140}
-            height={42}
-            className="h-9 w-auto object-contain"
+            width={578}
+            height={578}
+            className="h-10 w-10 object-contain"
           />
         </SheetHeader>
         <nav
