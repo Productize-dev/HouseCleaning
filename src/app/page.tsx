@@ -23,6 +23,7 @@ export default function Home() {
         <ShowcaseBand />
         <TrustBar />
         <WhyUs />
+        <About />
         <Services />
         <Process />
         <Reviews />

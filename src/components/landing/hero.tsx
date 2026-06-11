@@ -67,7 +67,7 @@ export function Hero() {
               >
                 |
               </span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+              <span className="block text-[11px] font-bold uppercase tracking-[0.12em] text-muted-foreground sm:tracking-[0.18em]">
                 {business.serviceRegionShort}
               </span>
             </motion.div>
@@ -261,7 +261,7 @@ export function Hero() {
                     </p>
                     <a
                       href={business.phoneHref}
-                      className="text-2xl font-bold text-primary hover:underline sm:text-3xl"
+                      className="text-xl font-bold tabular-nums text-primary hover:underline sm:text-2xl lg:text-3xl"
                     >
                       {business.phone}
                     </a>

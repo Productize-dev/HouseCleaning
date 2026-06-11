@@ -5,12 +5,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { business, serviceAreas } from "@/lib/business";
+import { business, serviceAreaSummary } from "@/lib/business";
 
 const faqs = [
   {
     question: "What areas does Fresh Cleaning Place serve?",
-    answer: `We provide residential and commercial cleaning throughout ${business.serviceRegion} — including Hales Corners, Greenfield, West Allis, Muskego, ${serviceAreas.slice(6).join(", ")}, and nearby communities.`,
+    answer: `We provide residential and commercial cleaning throughout ${business.serviceRegion} — ${serviceAreaSummary}`,
   },
   {
     question: "Do you offer both residential and commercial cleaning?",

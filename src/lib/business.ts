@@ -2,7 +2,7 @@ export const business = {
   name: "Fresh Cleaning Place LLC",
   shortName: "Fresh Cleaning Place",
   tagline:
-    "Residential and commercial cleaning in Hales Corners, Milwaukee County and surrounding areas",
+    "Residential and commercial cleaning across Milwaukee, Kenosha, Racine, and Waukesha Counties",
   phone: "(414) 491-5526",
   phoneHref: "tel:+14144915526",
   email: "freshcleaning75@gmail.com",
@@ -19,18 +19,29 @@ export const business = {
     latitude: 42.948457,
     longitude: -88.05593,
   },
-  hours: "Mon–Sat: 8:00 AM – 6:00 PM",
-  foundedNote: "Trusted by neighbors and businesses across Milwaukee County and surrounding areas",
-  serviceRegion: "Milwaukee County and surrounding areas",
-  serviceRegionShort: "Milwaukee County & surroundings",
+  hours: "Mon–Fri: 8:00 AM – 6:00 PM",
+  foundedNote:
+    "Trusted by neighbors and businesses across Milwaukee, Kenosha, Racine, and Waukesha Counties",
+  serviceRegion: "Milwaukee, Kenosha, Racine, and Waukesha Counties",
+  serviceRegionShort: "4-county service area",
   promo: "20% OFF your first cleaning — new clients",
   nextdoorUrl:
     "https://nextdoor.com/page/fresh-cleaning-greenfield-wi",
   satisfaction: "100% satisfaction guaranteed on every visit",
+  nextdoorStory:
+    "Specialized in Residential and Commercial cleaning!! providing quality, guarantee and reliability. is a company that provides the best service to our clients.",
+  mission:
+    "is to offer our clients a guarantee and the best satisfaction of our work, with great dedication and performance.",
+  vision:
+    "to reach many residential and commercial to offer the best cleaning service.",
+  valuesStatement: "Loyalty, responsibility, and trust.",
+  nextdoorClosing:
+    "thanks to our clients for all their trust. Committed to our clients. The best place. Fresh Cleaning Place!!!!",
 } as const;
 
 export const navLinks = [
   { href: "/services", label: "Services" },
+  { href: "/#about", label: "About" },
   { href: "/#why-us", label: "Why Us" },
   { href: "/#gallery", label: "Our Work" },
   { href: "/#reviews", label: "Reviews" },
@@ -41,7 +52,7 @@ export const navLinks = [
 
 export const stats = [
   { value: "100%", label: "Satisfaction guaranteed" },
-  { value: "12+", label: "Cities served" },
+  { value: "35", label: "Cities served" },
   { value: "5★", label: "Neighbor reviews" },
   { value: "Local", label: "Hales Corners based" },
 ] as const;
@@ -96,20 +107,61 @@ export const processSteps = [
   },
 ] as const;
 
-export const serviceAreas = [
-  "Hales Corners",
-  "Greenfield",
-  "West Allis",
-  "Muskego",
-  "New Berlin",
-  "Franklin",
-  "Greendale",
-  "Wauwatosa",
-  "Brookfield",
-  "Oak Creek",
-  "South Milwaukee",
-  "Milwaukee",
+export const serviceCounties = [
+  {
+    name: "Milwaukee County",
+    cities: [
+      "Milwaukee",
+      "Hales Corners",
+      "Greenfield",
+      "Greendale",
+      "South Milwaukee",
+      "Cudahy",
+      "Franklin",
+      "Oak Creek",
+      "Glendale",
+      "St. Francis",
+      "Fox Point",
+      "Bayside",
+      "Shorewood",
+      "Whitefish Bay",
+      "West Allis",
+      "Wauwatosa",
+      "Mequon",
+      "Cedarburg",
+    ],
+  },
+  {
+    name: "Kenosha County",
+    cities: ["Kenosha", "Pleasant Prairie"],
+  },
+  {
+    name: "Racine County",
+    cities: ["Racine", "Burlington", "Waterford", "Franksville", "Caledonia"],
+  },
+  {
+    name: "Waukesha County",
+    cities: [
+      "Waukesha",
+      "Brookfield",
+      "New Berlin",
+      "Muskego",
+      "Pewaukee",
+      "Oconomowoc",
+      "Menomonee Falls",
+      "Elm Grove",
+      "Hartland",
+      "North Prairie",
+    ],
+  },
 ] as const;
+
+export const serviceAreas = serviceCounties.flatMap(
+  (county) => county.cities,
+);
+
+export const serviceAreaSummary =
+  "35 cities across Milwaukee, Kenosha, Racine, and Waukesha Counties — including Milwaukee, Hales Corners, Greenfield, Kenosha, Racine, Waukesha, Brookfield, Muskego, North Prairie, Caledonia, and more.";
 
 export const residentialServices = [
   {

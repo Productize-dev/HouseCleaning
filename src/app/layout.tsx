@@ -27,7 +27,7 @@ const outfit = Outfit({
 const title =
   "Cleaning Services Hales Corners WI | Fresh Cleaning Place LLC";
 const description =
-  "Residential & commercial cleaning in Hales Corners, Milwaukee County & surrounding areas. House cleaning, offices, deep cleans & free estimates. Call (414) 491-5526.";
+  "Residential & commercial cleaning across Milwaukee, Kenosha, Racine & Waukesha Counties. House cleaning, offices, deep cleans & free estimates. Call (414) 491-5526.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

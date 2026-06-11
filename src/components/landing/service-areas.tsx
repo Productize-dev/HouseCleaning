@@ -5,7 +5,7 @@ import { MapPin } from "lucide-react";
 import { FadeIn } from "@/components/motion/fade-in";
 import { SectionHeader } from "@/components/landing/section-header";
 import { Badge } from "@/components/ui/badge";
-import { business, serviceAreas } from "@/lib/business";
+import { business, serviceCounties } from "@/lib/business";
 
 export function ServiceAreas() {
   return (
@@ -22,7 +22,7 @@ export function ServiceAreas() {
               id="areas-heading"
               align="left"
               eyebrow="Service Areas"
-              title="Cleaning Services in Milwaukee County & Surroundings"
+              title="Cleaning Services Across 4 Counties"
               description={`Locally based at ${business.address.street}, we proudly serve homes and businesses throughout ${business.serviceRegion}.`}
             />
 
@@ -40,18 +40,27 @@ export function ServiceAreas() {
                 <MapPin className="size-5 text-primary" aria-hidden />
                 Cities We Serve
               </h3>
-              <ul className="mt-5 flex flex-wrap gap-2">
-                {serviceAreas.map((area) => (
-                  <li key={area}>
-                    <Badge
-                      variant="outline"
-                      className="border-primary/20 bg-primary/5 px-3 py-1.5 text-sm font-normal"
-                    >
-                      {area}, WI
-                    </Badge>
-                  </li>
+              <div className="mt-5 max-h-[min(60vh,32rem)] space-y-6 overflow-y-auto overscroll-contain pr-1 sm:max-h-none sm:overflow-visible sm:pr-0">
+                {serviceCounties.map((county) => (
+                  <div key={county.name}>
+                    <h4 className="text-sm font-semibold text-foreground">
+                      {county.name}
+                    </h4>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {county.cities.map((area) => (
+                        <li key={area}>
+                          <Badge
+                            variant="outline"
+                            className="border-primary/20 bg-primary/5 px-3 py-1.5 text-sm font-normal"
+                          >
+                            {area}, WI
+                          </Badge>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
               <p className="mt-6 text-sm text-muted-foreground">
                 Don&apos;t see your city listed? Call{" "}
                 <a

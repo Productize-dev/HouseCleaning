@@ -21,7 +21,7 @@ export function MobileNav() {
       <SheetTrigger
         className={cn(
           buttonVariants({ variant: "outline", size: "icon" }),
-          "lg:hidden"
+          "xl:hidden"
         )}
         aria-label="Open menu"
       >

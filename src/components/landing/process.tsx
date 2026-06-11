@@ -2,11 +2,7 @@
 
 import Image from "next/image";
 
-import {
-  FadeIn,
-  StaggerChildren,
-  StaggerItem,
-} from "@/components/motion/fade-in";
+import { FadeIn } from "@/components/motion/fade-in";
 import { SectionHeader } from "@/components/landing/section-header";
 import { processSteps } from "@/lib/business";
 import { stockImages } from "@/lib/images";
@@ -31,29 +27,31 @@ export function Process() {
               description="From your first call to a spotless home — here is what to expect when you hire Fresh Cleaning Place."
             />
 
-            <StaggerChildren className="relative mt-12 space-y-0">
+            <ol className="relative mt-12 flex flex-col gap-6 sm:gap-8">
               <div
-                className="absolute left-[27px] top-8 hidden h-[calc(100%-4rem)] w-0.5 bg-gradient-to-b from-primary via-fresh to-brand lg:block"
+                className="absolute bottom-8 left-7 top-8 hidden w-0.5 bg-gradient-to-b from-primary via-fresh to-brand lg:block"
                 aria-hidden
               />
-              {processSteps.map((item) => (
-                <StaggerItem key={item.step}>
-                  <article className="relative flex gap-6 pb-8 last:pb-0">
-                    <div className="relative z-10 flex size-14 shrink-0 items-center justify-center rounded-2xl border-2 border-primary/20 bg-white shadow-md">
-                      <span className="text-lg font-bold text-primary">
-                        {item.step}
-                      </span>
-                    </div>
-                    <div className="rounded-2xl border border-border bg-card/80 p-5 shadow-sm backdrop-blur-sm">
-                      <h3 className="font-semibold">{item.title}</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                        {item.description}
-                      </p>
-                    </div>
-                  </article>
-                </StaggerItem>
+              {processSteps.map((item, index) => (
+                <li key={item.step}>
+                  <FadeIn delay={index * 0.08}>
+                    <article className="flex items-start gap-4 sm:gap-6">
+                      <div className="relative z-10 flex size-14 shrink-0 items-center justify-center rounded-2xl border-2 border-primary/20 bg-white shadow-md">
+                        <span className="text-lg font-bold text-primary">
+                          {item.step}
+                        </span>
+                      </div>
+                      <div className="min-w-0 flex-1 rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-6">
+                        <h3 className="font-semibold">{item.title}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                          {item.description}
+                        </p>
+                      </div>
+                    </article>
+                  </FadeIn>
+                </li>
               ))}
-            </StaggerChildren>
+            </ol>
           </div>
 
           <FadeIn delay={0.2} className="hidden lg:block">

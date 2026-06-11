@@ -1,4 +1,10 @@
-import { business, serviceAreas, services, siteUrl } from "./business";
+import {
+  business,
+  serviceAreaSummary,
+  serviceAreas,
+  services,
+  siteUrl,
+} from "./business";
 
 export function localBusinessJsonLd() {
   return {
@@ -39,7 +45,6 @@ export function localBusinessJsonLd() {
           "Wednesday",
           "Thursday",
           "Friday",
-          "Saturday",
         ],
         opens: "08:00",
         closes: "18:00",
@@ -163,12 +168,11 @@ export function faqJsonLd() {
   const faqs = [
     {
       question: "What areas does Fresh Cleaning Place serve?",
-      answer: `We provide residential and commercial cleaning throughout ${business.serviceRegion} — including Hales Corners, Greenfield, West Allis, Muskego, ${serviceAreas.slice(6).join(", ")}, and nearby communities.`,
+      answer: `We provide residential and commercial cleaning throughout ${business.serviceRegion} — ${serviceAreaSummary}`,
     },
     {
       question: "Do you offer commercial cleaning?",
-      answer:
-        "Yes. We clean offices, retail spaces, and commercial restrooms throughout Milwaukee County and surrounding areas.",
+      answer: `Yes. We clean offices, retail spaces, and commercial restrooms throughout ${business.serviceRegion}.`,
     },
     {
       question: "Do you bring your own cleaning supplies?",

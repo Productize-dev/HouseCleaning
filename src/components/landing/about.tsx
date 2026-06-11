@@ -19,29 +19,42 @@ export function About() {
               id="about-heading"
               align="left"
               eyebrow="About Us"
-              title={`Meet ${business.shortName}`}
-              description={`Based at ${business.address.full}, we are a locally owned cleaning company serving homes and businesses with quality, reliability, and respect for every property we care for.`}
+              title="Our Story"
+              description={`Based at ${business.address.full}, ${business.shortName} serves homes and businesses across ${business.serviceRegion}.`}
             />
 
-            <div className="mt-8 space-y-4 text-muted-foreground">
+            <div className="mt-8 space-y-5 text-muted-foreground">
+              <p className="leading-relaxed">{business.nextdoorStory}</p>
+
+              <div className="rounded-2xl border border-border bg-card/80 p-5 backdrop-blur-sm">
+                <p className="leading-relaxed">
+                  <span className="font-semibold text-foreground">
+                    Our Mission:
+                  </span>{" "}
+                  {business.mission}
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-border bg-card/80 p-5 backdrop-blur-sm">
+                <p className="leading-relaxed">
+                  <span className="font-semibold text-foreground">
+                    Our Vision:
+                  </span>{" "}
+                  {business.vision}
+                </p>
+              </div>
+
               <p className="leading-relaxed">
-                {business.name} is a dedicated local crew known across{" "}
-                {business.serviceRegion} for thorough work and outstanding
-                communication — residential and commercial.
+                <span className="font-semibold text-foreground">
+                  Our Values:
+                </span>{" "}
+                {business.valuesStatement}
               </p>
-              <p className="leading-relaxed">
-                Our mission is simple: deliver guaranteed satisfaction on every
-                visit. Whether it is a weekly clean in Hales Corners, a deep
-                clean in West Allis, or kitchen and bathroom detailing, we treat
-                every room with the same care and attention to detail.
-              </p>
-              <p className="leading-relaxed">
-                Our values — loyalty, responsibility, and trust — guide
-                everything we do. {business.foundedNote}.
-              </p>
+
+              <p className="leading-relaxed">{business.nextdoorClosing}</p>
             </div>
 
-            <ul className="mt-8 grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+            <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
               {values.map((value) => (
                 <li
                   key={value.title}
@@ -79,7 +92,7 @@ export function About() {
               <div className="image-frame relative aspect-square">
                 <Image
                   src="/images/flyer-promo.png"
-                  alt="Fresh Cleaning Place promotional flyer — 20% off first home cleaning"
+                  alt="Fresh Cleaning Place summer cleaning flyer — 20% off first cleaning"
                   fill
                   className="object-cover object-top"
                   sizes="250px"

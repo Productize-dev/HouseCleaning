@@ -9,15 +9,40 @@ import {
 } from "@/components/ui/accordion";
 import { business } from "@/lib/business";
 
+type RelatedLink = { href: string; label: string };
+
+type RelatedGroup = {
+  title: string;
+  links: RelatedLink[];
+};
+
 type ContentBlocksProps = {
   intro: string;
   localNote?: string;
   includes?: readonly string[];
   benefits?: readonly string[];
   faqs: readonly { question: string; answer: string }[];
-  relatedLinks?: { href: string; label: string }[];
+  relatedGroups?: RelatedGroup[];
+  relatedLinks?: RelatedLink[];
   relatedTitle?: string;
 };
+
+function RelatedLinksGrid({ links }: { links: RelatedLink[] }) {
+  return (
+    <ul className="m-0 grid list-none grid-cols-1 gap-2 p-0 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3">
+      {links.map((link) => (
+        <li key={link.href} className="min-w-0">
+          <Link
+            href={link.href}
+            className="flex h-full min-h-11 w-full items-center justify-center rounded-xl border border-border bg-card px-3 py-2.5 text-center text-sm font-medium leading-snug text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/5 hover:text-primary sm:min-h-12 sm:px-4 sm:py-3"
+          >
+            <span className="break-words">{link.label}</span>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export function ContentBlocks({
   intro,
@@ -25,9 +50,15 @@ export function ContentBlocks({
   includes,
   benefits,
   faqs,
+  relatedGroups,
   relatedLinks,
   relatedTitle = "Related pages",
 }: ContentBlocksProps) {
+  const groups =
+    relatedGroups ??
+    (relatedLinks && relatedLinks.length > 0
+      ? [{ title: relatedTitle, links: relatedLinks }]
+      : []);
   return (
     <div className="container-narrow py-12 sm:py-16">
       <div className="prose prose-lg max-w-none text-muted-foreground">
@@ -118,21 +149,31 @@ export function ContentBlocks({
         </p>
       </section>
 
-      {relatedLinks && relatedLinks.length > 0 && (
+      {groups.length > 0 && (
         <nav className="mt-12" aria-label={relatedTitle}>
-          <h2 className="text-lg font-semibold">{relatedTitle}</h2>
-          <ul className="mt-4 flex flex-wrap gap-2">
-            {relatedLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
+          {groups.length > 1 ? (
+            <h2 className="text-lg font-semibold sm:text-xl">
+              {relatedTitle}
+            </h2>
+          ) : null}
+          <div className={groups.length > 1 ? "mt-6 space-y-8" : "space-y-4"}>
+            {groups.map((group) => (
+              <section key={group.title}>
+                <h3
+                  className={
+                    groups.length > 1
+                      ? "text-base font-semibold text-foreground"
+                      : "text-lg font-semibold sm:text-xl"
+                  }
                 >
-                  {link.label}
-                </Link>
-              </li>
+                  {group.title}
+                </h3>
+                <div className="mt-3 sm:mt-4">
+                  <RelatedLinksGrid links={group.links} />
+                </div>
+              </section>
             ))}
-          </ul>
+          </div>
         </nav>
       )}
     </div>

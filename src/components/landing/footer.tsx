@@ -13,8 +13,8 @@ export function Footer() {
   return (
     <footer className="border-t border-primary/20 bg-gradient-to-br from-foreground to-[#0f1f1a] text-background">
       <div className="container-narrow py-12 sm:py-14">
-        <div className="grid gap-10 lg:grid-cols-5">
-          <div className="lg:col-span-2">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
+          <div className="sm:col-span-2 lg:col-span-2">
             <Image
               src="/images/logo.png"
               alt={business.name}

@@ -6,7 +6,6 @@ import { ContentBlocks } from "@/components/seo/content-blocks";
 import { JsonLd } from "@/components/seo/json-ld";
 import { PageHero } from "@/components/seo/page-hero";
 import { SeoShell } from "@/components/seo/seo-shell";
-import { business } from "@/lib/business";
 import {
   getAllAreaSlugs,
   getAreaBySlug,
@@ -97,7 +96,10 @@ export default async function AreaPage({ params }: PageProps) {
         intro={area.intro}
         localNote={area.localNote}
         faqs={area.faqs}
-        relatedLinks={[...serviceLinks, ...otherAreas]}
+        relatedGroups={[
+          { title: "Our services", links: serviceLinks },
+          { title: "Nearby areas", links: otherAreas },
+        ]}
         relatedTitle="Services & nearby areas"
       />
     </SeoShell>

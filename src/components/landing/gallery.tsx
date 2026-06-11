@@ -1,6 +1,5 @@
 import { GalleryGrid } from "@/components/landing/gallery-grid";
 import { SectionHeader } from "@/components/landing/section-header";
-import { business } from "@/lib/business";
 
 export function Gallery() {
   return (
@@ -15,7 +14,7 @@ export function Gallery() {
           id="gallery-heading"
           eyebrow="Our Work"
           title="Before & After — Real Home Results"
-          description="Photos from actual residential and commercial jobs across Milwaukee County."
+          description="Photos from actual residential and commercial jobs across our 4-county service area."
         />
         <GalleryGrid />
       </div>

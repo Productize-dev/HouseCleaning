@@ -112,7 +112,10 @@ export default async function ServicePage({ params }: PageProps) {
         includes={service.includes}
         benefits={service.benefits}
         faqs={service.faqs}
-        relatedLinks={[...otherServices, ...areaLinks]}
+        relatedGroups={[
+          { title: "More services", links: otherServices },
+          { title: "Service areas", links: areaLinks },
+        ]}
         relatedTitle="Explore more"
       />
     </SeoShell>
