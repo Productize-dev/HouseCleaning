@@ -21,7 +21,7 @@ export function ContactCta() {
           <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] shadow-[var(--shadow-premium)]">
             <Image
               src={stockImages.mirrorDetail.src}
-              alt=""
+              alt={stockImages.mirrorDetail.alt}
               fill
               className="object-cover"
               sizes="(max-width: 1152px) 100vw, 1152px"

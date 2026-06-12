@@ -17,6 +17,13 @@ export function Header() {
             {business.promo}
           </p>
           <div className="flex items-center gap-4 text-white/90">
+            <a
+              href={business.phoneHref}
+              className="inline-flex items-center gap-1.5 font-semibold text-white hover:underline"
+            >
+              <Phone className="size-3.5 shrink-0" aria-hidden />
+              {business.phone}
+            </a>
             <span className="hidden items-center gap-1.5 lg:inline-flex">
               <Clock className="size-3.5 shrink-0" aria-hidden />
               {business.hours}
@@ -68,14 +75,14 @@ export function Header() {
           <div className="flex items-center gap-2">
             <a
               href={business.phoneHref}
-              aria-label={`Call for a free estimate at ${business.phone}`}
+              aria-label={`Call ${business.phone} for a free estimate`}
               className={cn(
                 buttonVariants({ size: "sm" }),
-                "hidden gap-1.5 bg-gradient-to-r from-primary to-fresh text-white shadow-md hover:opacity-90 sm:inline-flex"
+                "inline-flex gap-1.5 bg-gradient-to-r from-primary to-fresh px-3 text-white shadow-md hover:opacity-90 sm:px-4"
               )}
             >
-              <Phone className="size-4" aria-hidden />
-              Free Estimate
+              <Phone className="size-4 shrink-0" aria-hidden />
+              <span className="font-bold tabular-nums">{business.phone}</span>
             </a>
             <MobileNav />
           </div>

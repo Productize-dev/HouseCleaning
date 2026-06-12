@@ -20,7 +20,7 @@ export function About() {
               align="left"
               eyebrow="About Us"
               title="Our Story"
-              description={`Based at ${business.address.full}, ${business.shortName} serves homes and businesses across ${business.serviceRegion}.`}
+              description={`Based at ${business.address.full}, ${business.shortName} serves homes and businesses across ${business.serviceRegion}. Whether you need maid service, house cleaning near Hales Corners, office cleaning, or clinic cleaning — we bring professional crews and supplies to every visit.`}
             />
 
             <div className="mt-8 space-y-5 text-muted-foreground">

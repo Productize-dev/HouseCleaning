@@ -137,7 +137,7 @@ function ServiceCard({
                 href={`/services/${slug}`}
                 className="mt-3 inline-flex text-sm font-semibold text-primary hover:underline"
               >
-                Learn more →
+                Learn more about {service.title} →
               </Link>
             )}
             <span className="sr-only">{service.keywords}</span>
@@ -163,9 +163,9 @@ function ServiceCard({
               href={`/services/${slug}`}
               className="mt-3 inline-flex text-sm font-semibold text-primary hover:underline"
             >
-              Learn more →
+              Learn more about {service.title} →
             </Link>
-          )}
+            )}
         </div>
       </article>
     </FadeIn>

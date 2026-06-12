@@ -1,11 +1,5 @@
-import {
-  business,
-  serviceAreaSummary,
-  serviceAreas,
-  services,
-  siteUrl,
-  testimonials,
-} from "./business";
+import { business, serviceAreas, services, siteUrl, testimonials } from "./business";
+import { homepageFaqs } from "./faqs";
 
 export function localBusinessJsonLd() {
   return {
@@ -79,6 +73,18 @@ export function localBusinessJsonLd() {
       business.facebookUrl,
       business.instagramUrl,
     ].filter(Boolean),
+    potentialAction: {
+      "@type": "ReserveAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: business.phoneHref,
+        actionPlatform: [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform",
+        ],
+      },
+      name: "Call for a free cleaning estimate",
+    },
     review: testimonials.map((testimonial) => ({
       "@type": "Review",
       reviewBody: testimonial.quote,
@@ -192,41 +198,5 @@ export function faqPageJsonLd(
 }
 
 export function faqJsonLd() {
-  const faqs = [
-    {
-      question: "What areas does Fresh Cleaning Place serve?",
-      answer: `We provide residential and commercial cleaning throughout ${business.serviceRegion} — ${serviceAreaSummary}`,
-    },
-    {
-      question: "Do you offer commercial cleaning?",
-      answer: `Yes. We clean offices, retail spaces, and commercial restrooms throughout ${business.serviceRegion}.`,
-    },
-    {
-      question: "Do you bring your own cleaning supplies?",
-      answer:
-        "Yes. Our professional crews arrive with their own tools and cleaning products for every home and business visit, including deep cleans and commercial restroom service.",
-    },
-    {
-      question: "How do I get a cleaning estimate?",
-      answer: `Call ${business.phone} for a free estimate. We offer house cleaning, commercial cleaning, deep cleaning, window cleaning, and home organizing with flexible scheduling.`,
-    },
-    {
-      question: "Does Fresh Cleaning Place offer recurring cleaning?",
-      answer:
-        "Yes. We offer weekly, biweekly, and monthly cleaning plans for homes and businesses with consistent crews and outstanding communication.",
-    },
-  ];
-
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
-  };
+  return faqPageJsonLd(homepageFaqs);
 }

@@ -231,7 +231,7 @@ export function Hero() {
                 <div className="flex items-center gap-3">
                   <Image
                     src="/images/logo.png"
-                    alt=""
+                    alt={`${business.name} logo`}
                     width={48}
                     height={48}
                     className="size-12 object-contain"

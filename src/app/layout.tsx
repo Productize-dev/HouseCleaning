@@ -38,18 +38,6 @@ export const metadata: Metadata = {
     template: `%s | ${business.shortName}`,
   },
   description,
-  keywords: [
-    "house cleaning Hales Corners WI",
-    "residential cleaning Hales Corners",
-    "maid service Greenfield WI",
-    "deep cleaning West Allis",
-    "home cleaning Milwaukee County",
-    "commercial cleaning Hales Corners WI",
-    "office cleaning Milwaukee County",
-    "biweekly house cleaning",
-    "house cleaning near me",
-    "Fresh Cleaning Place LLC",
-  ],
   authors: [{ name: business.name }],
   creator: business.name,
   openGraph: {
