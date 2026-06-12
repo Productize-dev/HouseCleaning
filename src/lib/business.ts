@@ -27,6 +27,9 @@ export const business = {
   promo: "20% OFF your first cleaning — new clients",
   nextdoorUrl:
     "https://nextdoor.com/page/fresh-cleaning-greenfield-wi",
+  facebookUrl:
+    "https://www.facebook.com/share/1Ccbq2YWB8/?mibextid=wwXIfr",
+  instagramUrl: "https://www.instagram.com/fresh_cleaning_place75/",
   satisfaction: "100% satisfaction guaranteed on every visit",
   nextdoorStory:
     "Specialized in Residential and Commercial cleaning!! providing quality, guarantee and reliability. is a company that provides the best service to our clients.",

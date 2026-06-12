@@ -22,7 +22,7 @@ export function Reviews() {
           description="Verified neighbors on Nextdoor recommend Fresh Cleaning Place for reliable, thorough house cleaning."
         />
 
-        <FadeIn className="mt-8 flex flex-col items-center justify-center gap-2">
+        <FadeIn className="mt-8 flex flex-col items-center justify-center gap-3">
           <div
             className="flex items-center gap-1 text-amber-500"
             aria-label="5 out of 5 stars"
@@ -31,15 +31,35 @@ export function Reviews() {
               <Star key={i} className="size-6 fill-current" aria-hidden />
             ))}
           </div>
-          <a
-            href={business.nextdoorUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/10"
-          >
-            Read more on Nextdoor
-            <ExternalLink className="size-3.5" aria-hidden />
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <a
+              href={business.nextdoorUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/10"
+            >
+              Read more on Nextdoor
+              <ExternalLink className="size-3.5" aria-hidden />
+            </a>
+            <a
+              href={business.facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/10"
+            >
+              Follow on Facebook
+              <ExternalLink className="size-3.5" aria-hidden />
+            </a>
+            <a
+              href={business.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/10"
+            >
+              Follow on Instagram
+              <ExternalLink className="size-3.5" aria-hidden />
+            </a>
+          </div>
         </FadeIn>
 
         <StaggerChildren className="mt-12 grid gap-6 md:grid-cols-2">

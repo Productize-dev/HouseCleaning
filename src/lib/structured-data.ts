@@ -64,7 +64,11 @@ export function localBusinessJsonLd() {
         },
       })),
     },
-    sameAs: [business.nextdoorUrl],
+    sameAs: [
+      business.nextdoorUrl,
+      business.facebookUrl,
+      business.instagramUrl,
+    ],
   };
 }
 

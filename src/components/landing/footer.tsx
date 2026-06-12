@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone } from "lucide-react";
+import { ExternalLink, MapPin, Phone } from "lucide-react";
 
 import { Separator } from "@/components/ui/separator";
 import { business, navLinks } from "@/lib/business";
@@ -120,6 +120,35 @@ export function Footer() {
                 <span>{business.address.full}</span>
               </li>
               <li>{business.hours}</li>
+              <li className="flex flex-wrap gap-x-4 gap-y-2 pt-1">
+                <a
+                  href={business.facebookUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-semibold text-background hover:text-fresh hover:underline"
+                >
+                  Facebook
+                  <ExternalLink className="size-3.5" aria-hidden />
+                </a>
+                <a
+                  href={business.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-semibold text-background hover:text-fresh hover:underline"
+                >
+                  Instagram
+                  <ExternalLink className="size-3.5" aria-hidden />
+                </a>
+                <a
+                  href={business.nextdoorUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-semibold text-background hover:text-fresh hover:underline"
+                >
+                  Nextdoor
+                  <ExternalLink className="size-3.5" aria-hidden />
+                </a>
+              </li>
             </ul>
           </div>
         </div>
