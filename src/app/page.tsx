@@ -29,7 +29,6 @@ export default function Home() {
         <Reviews />
         <Gallery />
         <ServiceAreas />
-        <About />
         <Organizing />
         <Faq />
         <ContactCta />

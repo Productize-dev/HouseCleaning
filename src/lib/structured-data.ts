@@ -4,6 +4,7 @@ import {
   serviceAreas,
   services,
   siteUrl,
+  testimonials,
 } from "./business";
 
 export function localBusinessJsonLd() {
@@ -17,8 +18,16 @@ export function localBusinessJsonLd() {
     url: siteUrl,
     telephone: business.phone,
     email: business.email,
-    image: `${siteUrl}/images/og-logo.png`,
+    image: `${siteUrl}/images/team-cleaning.png`,
+    logo: `${siteUrl}/images/og-logo.png`,
     priceRange: "$$",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: business.phone,
+      contactType: "customer service",
+      areaServed: "US",
+      availableLanguage: "English",
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: business.address.street,
@@ -32,6 +41,7 @@ export function localBusinessJsonLd() {
       latitude: business.geo.latitude,
       longitude: business.geo.longitude,
     },
+    hasMap: business.googleMapsUrl,
     areaServed: serviceAreas.map((city) => ({
       "@type": "City",
       name: `${city}, WI`,
@@ -68,7 +78,20 @@ export function localBusinessJsonLd() {
       business.nextdoorUrl,
       business.facebookUrl,
       business.instagramUrl,
-    ],
+    ].filter(Boolean),
+    review: testimonials.map((testimonial) => ({
+      "@type": "Review",
+      reviewBody: testimonial.quote,
+      author: {
+        "@type": "Person",
+        name: testimonial.author,
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: 5,
+        bestRating: 5,
+      },
+    })),
   };
 }
 

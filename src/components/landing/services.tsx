@@ -8,9 +8,12 @@ import {
   Home,
   Layers,
   LayoutGrid,
+  PawPrint,
   Refrigerator,
   Sparkles,
   SquareStack,
+  Stethoscope,
+  Wrench,
 } from "lucide-react";
 
 import { FadeIn } from "@/components/motion/fade-in";
@@ -39,7 +42,16 @@ const residentialIcons = [
   SquareStack,
   LayoutGrid,
 ];
-const commercialIcons = [Building2, Bath, Building2, Sparkles];
+const commercialIcons = [
+  Building2,
+  Bath,
+  Building2,
+  Sparkles,
+  Wrench,
+  Stethoscope,
+  Sparkles,
+  PawPrint,
+];
 
 const slugByTitle: Record<string, string> = {
   ...Object.fromEntries(seoServices.map((s) => [s.title, s.slug])),
@@ -47,6 +59,10 @@ const slugByTitle: Record<string, string> = {
   "Commercial Restroom Cleaning": "commercial-restroom-cleaning",
   "Retail & Small Business": "commercial-cleaning",
   "Commercial Deep Cleaning": "commercial-cleaning",
+  "Building Maintenance": "building-maintenance-cleaning",
+  "Clinic Cleaning": "medical-clinic-cleaning",
+  "Dental Clinic Cleaning": "dental-clinic-cleaning",
+  "Veterinary Clinic Cleaning": "veterinary-clinic-cleaning",
 };
 
 const featuredImages = [
@@ -221,7 +237,7 @@ export function Services() {
               />
             ))}
           </div>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {comOther.map((service, index) => (
               <ServiceCard
                 key={service.title}

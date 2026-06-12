@@ -80,11 +80,11 @@ export function Hero() {
               className="mt-5"
             >
               <span className="block text-[2.65rem] font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.5rem]">
-                Premium{" "}
-                <span className="hero-headline-accent">Cleaning Services</span>
+                House Cleaning Services in{" "}
+                <span className="hero-headline-accent">Hales Corners, WI</span>
               </span>
               <span className="mt-4 block border-t border-border pt-4 text-lg font-normal leading-relaxed text-muted-foreground sm:text-xl">
-                Trusted by families across{" "}
+                Premium residential &amp; commercial cleaning trusted across{" "}
                 <span className="font-semibold text-foreground">
                   {business.serviceRegionShort}
                 </span>

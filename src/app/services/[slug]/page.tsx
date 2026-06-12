@@ -9,6 +9,7 @@ import { SeoShell } from "@/components/seo/seo-shell";
 import { business } from "@/lib/business";
 import { commercialImages } from "@/lib/images";
 import { getOtherAreas } from "@/lib/seo/areas";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import { absoluteUrl } from "@/lib/seo/pages";
 import {
   getAllServiceSlugs,
@@ -26,11 +27,19 @@ type PageProps = { params: Promise<{ slug: string }> };
 const commercialSlugs = new Set([
   "commercial-cleaning",
   "commercial-restroom-cleaning",
+  "building-maintenance-cleaning",
+  "medical-clinic-cleaning",
+  "dental-clinic-cleaning",
+  "veterinary-clinic-cleaning",
 ]);
 
 const serviceHeroImages: Record<string, { src: string; alt: string }> = {
   "commercial-cleaning": commercialImages.teamWalkway,
   "commercial-restroom-cleaning": commercialImages.professionalCrew,
+  "building-maintenance-cleaning": commercialImages.exteriorWindows,
+  "medical-clinic-cleaning": commercialImages.professionalCrew,
+  "dental-clinic-cleaning": commercialImages.teamWalkway,
+  "veterinary-clinic-cleaning": commercialImages.restaurantFloor,
 };
 
 export function generateStaticParams() {
@@ -44,18 +53,11 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug);
   if (!service) return {};
 
-  const url = absoluteUrl(`/services/${slug}`);
-
-  return {
+  return createPageMetadata({
     title: service.metaTitle,
     description: service.metaDescription,
-    alternates: { canonical: url },
-    openGraph: {
-      title: service.metaTitle,
-      description: service.metaDescription,
-      url,
-    },
-  };
+    path: `/services/${slug}`,
+  });
 }
 
 export default async function ServicePage({ params }: PageProps) {

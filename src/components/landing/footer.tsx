@@ -117,7 +117,14 @@ export function Footer() {
               </li>
               <li className="inline-flex gap-2">
                 <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden />
-                <span>{business.address.full}</span>
+                <a
+                  href={business.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-fresh hover:underline"
+                >
+                  {business.address.full}
+                </a>
               </li>
               <li>{business.hours}</li>
               <li className="flex flex-wrap gap-x-4 gap-y-2 pt-1">

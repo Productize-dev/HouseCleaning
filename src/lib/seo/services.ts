@@ -335,6 +335,150 @@ export const seoServices: SeoServicePage[] = [
       },
     ],
   },
+  {
+    slug: "building-maintenance-cleaning",
+    title: "Building Maintenance Cleaning",
+    metaTitle: "Building Maintenance Cleaning Milwaukee WI",
+    metaDescription:
+      "Building maintenance & facility cleaning in Hales Corners & Milwaukee County. Lobbies, hallways, common areas. Free estimate — call (414) 491-5526.",
+    h1: "Building Maintenance Cleaning Services",
+    intro:
+      "Keep your building looking professional day after day. Fresh Cleaning Place provides recurring building maintenance cleaning for lobbies, hallways, elevators, common areas, and shared workspaces — with flexible scheduling around tenants and business hours.",
+    includes: [
+      "Lobby and reception area cleaning",
+      "Hallways, stairwells, and elevator touchpoints",
+      "Common-area floors vacuumed and mopped",
+      "Trash removal and surface dusting",
+      "Restroom cleaning and sanitization",
+      "Professional supplies brought to every visit",
+    ],
+    benefits: [
+      "Reliable recurring crews for multi-tenant buildings",
+      "Flexible before-hours, after-hours, or daytime visits",
+      "Consistent results across all common areas",
+      "100% satisfaction guaranteed",
+    ],
+    faqs: [
+      {
+        question: "Do you clean multi-tenant office buildings?",
+        answer:
+          "Yes. We maintain lobbies, hallways, and shared spaces in office buildings and commercial properties throughout Milwaukee County and surrounding areas.",
+      },
+      {
+        question: "Can building maintenance be scheduled daily or weekly?",
+        answer:
+          "Yes. We offer daily, weekly, biweekly, and custom schedules based on foot traffic and your facility's needs.",
+      },
+    ],
+  },
+  {
+    slug: "medical-clinic-cleaning",
+    title: "Medical Clinic Cleaning",
+    metaTitle: "Medical Clinic Cleaning Hales Corners WI",
+    metaDescription:
+      "Medical clinic & healthcare office cleaning in Hales Corners & Milwaukee County. Waiting rooms, exam rooms & restrooms. (414) 491-5526.",
+    h1: "Medical Clinic Cleaning Services",
+    intro:
+      "Medical clinics need a clean, welcoming environment for patients and staff. Fresh Cleaning Place cleans waiting rooms, exam rooms, restrooms, and common areas with careful attention to high-touch surfaces and professional presentation.",
+    includes: [
+      "Waiting room and reception area cleaning",
+      "Exam room surfaces and floors",
+      "Restroom sanitization and restocking (on request)",
+      "High-touch surface wipe-downs",
+      "Trash removal and floor care",
+      "Professional-grade supplies included",
+    ],
+    benefits: [
+      "Experienced with healthcare office environments",
+      "Flexible scheduling around patient hours",
+      "Thorough attention to restrooms and common areas",
+      "Reliable recurring service available",
+    ],
+    faqs: [
+      {
+        question: "Do you clean small medical and healthcare offices?",
+        answer:
+          "Yes. We serve medical clinics, urgent care offices, and healthcare practices throughout southeastern Wisconsin.",
+      },
+      {
+        question: "Can clinic cleaning happen after hours?",
+        answer:
+          "Yes. Many healthcare clients prefer early morning, evening, or weekend visits to avoid disrupting patients.",
+      },
+    ],
+  },
+  {
+    slug: "dental-clinic-cleaning",
+    title: "Dental Clinic Cleaning",
+    metaTitle: "Dental Office Cleaning Milwaukee WI",
+    metaDescription:
+      "Dental clinic & dental office cleaning in Hales Corners & Milwaukee County. Operatories, reception & restrooms. Call (414) 491-5526.",
+    h1: "Dental Clinic Cleaning Services",
+    intro:
+      "Dental offices require meticulous cleaning in operatories, reception areas, and restrooms. Fresh Cleaning Place helps dental practices maintain a spotless, professional environment that patients notice from the moment they walk in.",
+    includes: [
+      "Reception and waiting area cleaning",
+      "Operatory surfaces and floors",
+      "Restroom deep cleaning and sanitization",
+      "Break room and staff area wipe-downs",
+      "Trash removal and floor mopping",
+      "Professional supplies brought to every visit",
+    ],
+    benefits: [
+      "Tailored for dental office layouts and schedules",
+      "Attention to patient-facing areas and restrooms",
+      "Recurring plans for consistent results",
+      "Flexible before-hours or after-hours visits",
+    ],
+    faqs: [
+      {
+        question: "Do you clean dental offices and operatories?",
+        answer:
+          "Yes. We clean reception areas, operatories, restrooms, and staff spaces in dental practices across our service area.",
+      },
+      {
+        question: "How often should a dental office be professionally cleaned?",
+        answer:
+          "Most dental practices schedule daily or several-times-weekly cleaning depending on patient volume. We will recommend a plan during your free estimate.",
+      },
+    ],
+  },
+  {
+    slug: "veterinary-clinic-cleaning",
+    title: "Veterinary Clinic Cleaning",
+    metaTitle: "Veterinary Clinic Cleaning Milwaukee WI",
+    metaDescription:
+      "Veterinary clinic cleaning in Hales Corners & Milwaukee County. Exam rooms, kennels, waiting areas & treatment spaces. (414) 491-5526.",
+    h1: "Veterinary Clinic Cleaning Services",
+    intro:
+      "Veterinary clinics face unique cleaning challenges — exam rooms, kennels, waiting areas, and treatment spaces all need regular attention. Fresh Cleaning Place provides thorough, reliable cleaning tailored to animal care facilities.",
+    includes: [
+      "Waiting room and reception cleaning",
+      "Exam and treatment room floors and surfaces",
+      "Kennel and holding area cleaning",
+      "Restroom sanitization",
+      "Trash removal and odor-conscious floor care",
+      "Professional supplies included on every visit",
+    ],
+    benefits: [
+      "Experienced with vet clinic layouts and needs",
+      "Flexible scheduling around appointments",
+      "Thorough cleaning of high-traffic patient areas",
+      "Recurring maintenance plans available",
+    ],
+    faqs: [
+      {
+        question: "Do you clean veterinary clinics and animal hospitals?",
+        answer:
+          "Yes. We serve veterinary clinics and animal care facilities throughout Milwaukee, Kenosha, Racine, and Waukesha Counties.",
+      },
+      {
+        question: "Can vet clinic cleaning be scheduled after hours?",
+        answer:
+          "Yes. We offer early morning, evening, and weekend visits to work around your appointment schedule.",
+      },
+    ],
+  },
 ];
 
 export function getServiceBySlug(slug: string): SeoServicePage | undefined {

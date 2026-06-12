@@ -30,6 +30,8 @@ export const business = {
   facebookUrl:
     "https://www.facebook.com/share/1Ccbq2YWB8/?mibextid=wwXIfr",
   instagramUrl: "https://www.instagram.com/fresh_cleaning_place75/",
+  googleMapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=11421+W+Abbott+Ave,+Hales+Corners,+WI+53130",
   satisfaction: "100% satisfaction guaranteed on every visit",
   nextdoorStory:
     "Specialized in Residential and Commercial cleaning!! providing quality, guarantee and reliability. is a company that provides the best service to our clients.",
@@ -247,6 +249,34 @@ export const commercialServices = [
     keywords: "commercial deep cleaning",
     featured: false,
   },
+  {
+    title: "Building Maintenance",
+    description:
+      "Ongoing cleaning for office buildings, lobbies, hallways, and shared spaces — reliable crews on your schedule.",
+    keywords: "building maintenance cleaning, facility cleaning",
+    featured: false,
+  },
+  {
+    title: "Clinic Cleaning",
+    description:
+      "Sanitized waiting rooms, exam rooms, and common areas for medical clinics and healthcare offices.",
+    keywords: "medical clinic cleaning, healthcare cleaning",
+    featured: false,
+  },
+  {
+    title: "Dental Clinic Cleaning",
+    description:
+      "Thorough cleaning for dental offices — operatories, reception, and restrooms with attention to hygiene.",
+    keywords: "dental office cleaning, dental clinic cleaning",
+    featured: false,
+  },
+  {
+    title: "Veterinary Clinic Cleaning",
+    description:
+      "Professional cleaning for vet clinics — exam rooms, kennels, waiting areas, and treatment spaces.",
+    keywords: "veterinary clinic cleaning, vet office cleaning",
+    featured: false,
+  },
 ] as const;
 
 /** All services — residential first, then commercial */
@@ -297,4 +327,4 @@ export const values = [
 ] as const;
 
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://freshcleaningplace.com";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.freshcleaningplacellc.com";

@@ -24,7 +24,7 @@ export function PageHero({
       <div className="absolute inset-0">
         <Image
           src={image.src}
-          alt=""
+          alt={image.alt}
           fill
           className="object-cover"
           priority

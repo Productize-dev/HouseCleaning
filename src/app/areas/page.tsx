@@ -1,19 +1,21 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, MapPin } from "lucide-react";
 
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { JsonLd } from "@/components/seo/json-ld";
 import { PageHero } from "@/components/seo/page-hero";
 import { SeoShell } from "@/components/seo/seo-shell";
 import { business, serviceCounties } from "@/lib/business";
 import { seoAreas } from "@/lib/seo/areas";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import { absoluteUrl } from "@/lib/seo/pages";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: `House Cleaning Service Areas | ${business.serviceRegionShort}`,
   description: `Residential & commercial cleaning in ${business.serviceRegion}. 35 cities across Milwaukee, Kenosha, Racine, and Waukesha Counties. Call ${business.phone}.`,
-  alternates: { canonical: absoluteUrl("/areas") },
-};
+  path: "/areas",
+});
 
 export default function AreasIndexPage() {
   const areasByCounty = serviceCounties.map((county) => ({
@@ -21,8 +23,14 @@ export default function AreasIndexPage() {
     areas: seoAreas.filter((area) => area.county === county.name),
   }));
 
+  const jsonLd = breadcrumbJsonLd([
+    { name: "Home", url: absoluteUrl("/") },
+    { name: "Service Areas", url: absoluteUrl("/areas") },
+  ]);
+
   return (
     <SeoShell>
+      <JsonLd data={jsonLd} />
       <PageHero
         eyebrow="Service Areas"
         title={`House Cleaning in ${business.serviceRegionShort}`}

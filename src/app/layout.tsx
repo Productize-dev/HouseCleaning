@@ -4,6 +4,7 @@ import Script from "next/script";
 
 import { ChatbaseWidget } from "@/components/chatbase/chatbase-widget";
 import { business, siteUrl } from "@/lib/business";
+import { defaultOgImage } from "@/lib/seo/metadata";
 import {
   faqJsonLd,
   localBusinessJsonLd,
@@ -58,19 +59,13 @@ export const metadata: Metadata = {
     siteName: business.name,
     title,
     description,
-    images: [
-      {
-        url: "/images/og-logo.png",
-        width: 578,
-        height: 578,
-        alt: business.name,
-      },
-    ],
+    images: [defaultOgImage],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
+    images: [defaultOgImage.url],
   },
   robots: {
     index: true,

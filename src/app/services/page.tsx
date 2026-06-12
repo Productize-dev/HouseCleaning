@@ -1,27 +1,35 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { JsonLd } from "@/components/seo/json-ld";
 import { PageHero } from "@/components/seo/page-hero";
 import { SeoShell } from "@/components/seo/seo-shell";
 import { business } from "@/lib/business";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import { absoluteUrl } from "@/lib/seo/pages";
 import { seoServices } from "@/lib/seo/services";
+import { breadcrumbJsonLd } from "@/lib/structured-data";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "House Cleaning Services | Hales Corners WI",
-  description: `Residential & commercial cleaning — regular, deep, kitchen, bathroom, offices & restrooms. ${business.shortName} serves ${business.serviceRegion}. Call ${business.phone}.`,
-  alternates: { canonical: absoluteUrl("/services") },
-};
+  description: `Residential & commercial cleaning — regular, deep, kitchen, bathroom, offices, building maintenance, clinics, dental & veterinary. ${business.shortName} serves ${business.serviceRegion}. Call ${business.phone}.`,
+  path: "/services",
+});
 
 export default function ServicesIndexPage() {
+  const jsonLd = breadcrumbJsonLd([
+    { name: "Home", url: absoluteUrl("/") },
+    { name: "Services", url: absoluteUrl("/services") },
+  ]);
+
   return (
     <SeoShell>
+      <JsonLd data={jsonLd} />
       <PageHero
         eyebrow="All Services"
         title="Residential & Commercial Cleaning Services"
-        description={`Homes and businesses in Hales Corners and ${business.serviceRegion} — routine maintenance, deep cleans, organizing, and commercial facilities.`}
+        description={`Homes and businesses in Hales Corners and ${business.serviceRegion} — routine maintenance, deep cleans, organizing, building maintenance, and specialty clinic cleaning.`}
       />
       <div className="container-narrow py-12 sm:py-16">
         <Breadcrumbs

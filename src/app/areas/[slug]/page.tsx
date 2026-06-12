@@ -11,6 +11,7 @@ import {
   getAreaBySlug,
   getOtherAreas,
 } from "@/lib/seo/areas";
+import { createPageMetadata } from "@/lib/seo/metadata";
 import { absoluteUrl } from "@/lib/seo/pages";
 import { seoServices } from "@/lib/seo/services";
 import {
@@ -32,18 +33,11 @@ export async function generateMetadata({
   const area = getAreaBySlug(slug);
   if (!area) return {};
 
-  const url = absoluteUrl(`/areas/${slug}`);
-
-  return {
+  return createPageMetadata({
     title: area.metaTitle,
     description: area.metaDescription,
-    alternates: { canonical: url },
-    openGraph: {
-      title: area.metaTitle,
-      description: area.metaDescription,
-      url,
-    },
-  };
+    path: `/areas/${slug}`,
+  });
 }
 
 export default async function AreaPage({ params }: PageProps) {
