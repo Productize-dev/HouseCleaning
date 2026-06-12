@@ -16,7 +16,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Regular House Cleaning",
     metaTitle: "Regular House Cleaning Hales Corners WI",
     metaDescription:
-      "Weekly, biweekly & monthly house cleaning in Hales Corners, Milwaukee County & surroundings. Reliable crews, supplies included. Free estimate — call (414) 491-5526.",
+      "Weekly, biweekly & monthly house cleaning in Hales Corners, Milwaukee County & surroundings. Reliable crews, supplies included. Free estimate — call (414) 348-5500.",
     h1: "Regular House Cleaning in Hales Corners, Milwaukee County & surroundings",
     intro:
       "Keep your home consistently fresh with recurring house cleaning from Fresh Cleaning Place LLC. Our residential team handles kitchens, bathrooms, bedrooms, and living areas on a schedule that fits your life — weekly, biweekly, or monthly.",
@@ -52,7 +52,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Deep Cleaning",
     metaTitle: "Deep House Cleaning Hales Corners WI",
     metaDescription:
-      "Top-to-bottom deep cleaning for move-ins, move-outs & spring cleaning in Hales Corners, Greenfield & West Allis. Free estimates. Call (414) 491-5526.",
+      "Top-to-bottom deep cleaning for move-ins, move-outs & spring cleaning in Hales Corners, Greenfield & West Allis. Free estimates. Call (414) 348-5500.",
     h1: "Deep House Cleaning Services in Southeastern Wisconsin",
     intro:
       "When your home needs more than a maintenance clean, our deep cleaning service delivers top-to-bottom attention — perfect for spring cleaning, move-ins, move-outs, or homes that have not been professionally cleaned in a while.",
@@ -88,7 +88,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Kitchen & Appliance Cleaning",
     metaTitle: "Kitchen Cleaning Hales Corners WI",
     metaDescription:
-      "Professional kitchen & appliance cleaning — stoves, sinks, fridges & more in Hales Corners, Milwaukee County & surroundings. Homes & businesses. (414) 491-5526.",
+      "Professional kitchen & appliance cleaning — stoves, sinks, fridges & more in Hales Corners, Milwaukee County & surroundings. Homes & businesses. (414) 348-5500.",
     h1: "Kitchen & Appliance Cleaning for Milwaukee County & Surrounding Areas",
     intro:
       "Kitchens are the heart of the home — and the hardest-working room to keep clean. Fresh Cleaning Place restores stovetops, sinks, countertops, and appliances so your cooking space looks and feels sanitary again.",
@@ -124,7 +124,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Bathroom Deep Clean",
     metaTitle: "Bathroom Cleaning Hales Corners WI",
     metaDescription:
-      "Bathroom deep cleaning — tubs, showers, tile & fixtures in Hales Corners, West Allis & Muskego. Hard water & soap scum specialists. (414) 491-5526.",
+      "Bathroom deep cleaning — tubs, showers, tile & fixtures in Hales Corners, West Allis & Muskego. Hard water & soap scum specialists. (414) 348-5500.",
     h1: "Bathroom Deep Cleaning Services Near You",
     intro:
       "Bathrooms collect soap scum, hard-water stains, and grime faster than any other room. Our bathroom deep clean targets tubs, showers, tile, toilets, and fixtures for a sparkling, fresh result.",
@@ -160,7 +160,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Basement & Specialty Cleaning",
     metaTitle: "Basement Cleaning Hales Corners WI",
     metaDescription:
-      "Basement deep cleaning & specialty room cleaning in Hales Corners, Milwaukee County & surroundings. Dust, floors & storage areas. Free estimate (414) 491-5526.",
+      "Basement deep cleaning & specialty room cleaning in Hales Corners, Milwaukee County & surroundings. Dust, floors & storage areas. Free estimate (414) 348-5500.",
     h1: "Basement & Specialty Room Cleaning",
     intro:
       "Finished basements, laundry rooms, and storage areas often get overlooked. Fresh Cleaning Place provides detailed basement and specialty cleaning so every level of your home feels fresh and usable.",
@@ -196,7 +196,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Window Cleaning",
     metaTitle: "Window Cleaning Hales Corners WI",
     metaDescription:
-      "Residential window cleaning in Hales Corners, Milwaukee County & surroundings. Streak-free interiors & reachable exteriors. Free estimate (414) 491-5526.",
+      "Residential window cleaning in Hales Corners, Milwaukee County & surroundings. Streak-free interiors & reachable exteriors. Free estimate (414) 348-5500.",
     h1: "Residential Window Cleaning in Hales Corners",
     intro:
       "Bright, streak-free windows change how every room feels. Fresh Cleaning Place offers residential window cleaning for interiors and reachable exteriors — perfect alongside a regular or deep home clean.",
@@ -232,7 +232,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Home Organizing",
     metaTitle: "Home Organizing Hales Corners WI",
     metaDescription:
-      "Home organizing & decluttering in Hales Corners, Milwaukee County & surroundings. Closets, kitchens & storage — plus cleaning. (414) 491-5526.",
+      "Home organizing & decluttering in Hales Corners, Milwaukee County & surroundings. Closets, kitchens & storage — plus cleaning. (414) 348-5500.",
     h1: "Home Organizing & Decluttering Services",
     intro:
       "A clean home feels even better when everything has its place. Fresh Cleaning Place offers home organizing alongside our residential cleaning — transforming cluttered closets, kitchens, and living spaces into calm, functional rooms.",
@@ -268,7 +268,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Commercial Cleaning",
     metaTitle: "Commercial Cleaning Hales Corners WI",
     metaDescription:
-      "Office & commercial cleaning in Hales Corners, Milwaukee County & surroundings. Restrooms, workspaces, retail. Free estimate — call (414) 491-5526.",
+      "Office & commercial cleaning in Hales Corners, Milwaukee County & surroundings. Restrooms, workspaces, retail. Free estimate — call (414) 348-5500.",
     h1: "Commercial Cleaning Services in Milwaukee County",
     intro:
       "Fresh Cleaning Place LLC keeps offices, retail spaces, and commercial facilities clean and professional. Flexible scheduling — before hours, after hours, or during slow periods — with supplies included.",
@@ -304,7 +304,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Commercial Restroom Cleaning",
     metaTitle: "Commercial Restroom Cleaning Milwaukee WI",
     metaDescription:
-      "Commercial restroom & bathroom sanitization in Hales Corners & Milwaukee County. Offices, retail & facilities. Call (414) 491-5526.",
+      "Commercial restroom & bathroom sanitization in Hales Corners & Milwaukee County. Offices, retail & facilities. Call (414) 348-5500.",
     h1: "Commercial Restroom Cleaning & Sanitization",
     intro:
       "Restrooms make a lasting impression on employees and customers. Our commercial restroom service targets urinals, stalls, fixtures, tile, and floors for a sanitary, professional finish.",
@@ -340,7 +340,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Building Maintenance Cleaning",
     metaTitle: "Building Maintenance Cleaning Milwaukee WI",
     metaDescription:
-      "Building maintenance & facility cleaning in Hales Corners & Milwaukee County. Lobbies, hallways, common areas. Free estimate — call (414) 491-5526.",
+      "Building maintenance & facility cleaning in Hales Corners & Milwaukee County. Lobbies, hallways, common areas. Free estimate — call (414) 348-5500.",
     h1: "Building Maintenance Cleaning Services",
     intro:
       "Keep your building looking professional day after day. Fresh Cleaning Place provides recurring building maintenance cleaning for lobbies, hallways, elevators, common areas, and shared workspaces — with flexible scheduling around tenants and business hours.",
@@ -376,7 +376,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Medical Clinic Cleaning",
     metaTitle: "Medical Clinic Cleaning Hales Corners WI",
     metaDescription:
-      "Medical clinic & healthcare office cleaning in Hales Corners & Milwaukee County. Waiting rooms, exam rooms & restrooms. (414) 491-5526.",
+      "Medical clinic & healthcare office cleaning in Hales Corners & Milwaukee County. Waiting rooms, exam rooms & restrooms. (414) 348-5500.",
     h1: "Medical Clinic Cleaning Services",
     intro:
       "Medical clinics need a clean, welcoming environment for patients and staff. Fresh Cleaning Place cleans waiting rooms, exam rooms, restrooms, and common areas with careful attention to high-touch surfaces and professional presentation.",
@@ -412,7 +412,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Dental Clinic Cleaning",
     metaTitle: "Dental Office Cleaning Milwaukee WI",
     metaDescription:
-      "Dental clinic & dental office cleaning in Hales Corners & Milwaukee County. Operatories, reception & restrooms. Call (414) 491-5526.",
+      "Dental clinic & dental office cleaning in Hales Corners & Milwaukee County. Operatories, reception & restrooms. Call (414) 348-5500.",
     h1: "Dental Clinic Cleaning Services",
     intro:
       "Dental offices require meticulous cleaning in operatories, reception areas, and restrooms. Fresh Cleaning Place helps dental practices maintain a spotless, professional environment that patients notice from the moment they walk in.",
@@ -448,7 +448,7 @@ export const seoServices: SeoServicePage[] = [
     title: "Veterinary Clinic Cleaning",
     metaTitle: "Veterinary Clinic Cleaning Milwaukee WI",
     metaDescription:
-      "Veterinary clinic cleaning in Hales Corners & Milwaukee County. Exam rooms, kennels, waiting areas & treatment spaces. (414) 491-5526.",
+      "Veterinary clinic cleaning in Hales Corners & Milwaukee County. Exam rooms, kennels, waiting areas & treatment spaces. (414) 348-5500.",
     h1: "Veterinary Clinic Cleaning Services",
     intro:
       "Veterinary clinics face unique cleaning challenges — exam rooms, kennels, waiting areas, and treatment spaces all need regular attention. Fresh Cleaning Place provides thorough, reliable cleaning tailored to animal care facilities.",

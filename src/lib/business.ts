@@ -3,8 +3,8 @@ export const business = {
   shortName: "Fresh Cleaning Place",
   tagline:
     "Residential and commercial cleaning across Milwaukee, Kenosha, Racine, and Waukesha Counties",
-  phone: "(414) 491-5526",
-  phoneHref: "tel:+14144915526",
+  phone: "(414) 348-5500",
+  phoneHref: "tel:+14143485500",
   email: "freshcleaning75@gmail.com",
   emailHref: "mailto:freshcleaning75@gmail.com",
   address: {
