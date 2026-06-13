@@ -13,7 +13,12 @@ export function localBusinessJsonLd() {
     telephone: business.phone,
     email: business.email,
     image: `${siteUrl}/images/team-cleaning.png`,
-    logo: `${siteUrl}/images/og-logo.png`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/images/og-logo.png`,
+      width: 578,
+      height: 578,
+    },
     priceRange: "$$",
     contactPoint: {
       "@type": "ContactPoint",
