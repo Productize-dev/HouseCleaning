@@ -13,6 +13,11 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#1a4d3e",
     icons: [
       {
+        src: "/favicon.ico",
+        sizes: "48x48 96x96 192x192",
+        type: "image/x-icon",
+      },
+      {
         src: "/favicon-96x96.png",
         sizes: "96x96",
         type: "image/png",
@@ -20,11 +25,6 @@ export default function manifest(): MetadataRoute.Manifest {
       {
         src: "/favicon-192x192.png",
         sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        src: "/images/og-logo.png",
-        sizes: "578x578",
         type: "image/png",
       },
     ],
