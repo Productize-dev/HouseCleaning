@@ -78,18 +78,32 @@ export function localBusinessJsonLd() {
       business.facebookUrl,
       business.instagramUrl,
     ].filter(Boolean),
-    potentialAction: {
-      "@type": "ReserveAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: business.phoneHref,
-        actionPlatform: [
-          "http://schema.org/DesktopWebPlatform",
-          "http://schema.org/MobileWebPlatform",
-        ],
+    potentialAction: [
+      {
+        "@type": "ReserveAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: business.bookingUrl,
+          actionPlatform: [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform",
+          ],
+        },
+        name: business.bookingLabel,
       },
-      name: "Call for a free cleaning estimate",
-    },
+      {
+        "@type": "ReserveAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: business.phoneHref,
+          actionPlatform: [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform",
+          ],
+        },
+        name: "Call for a free cleaning estimate",
+      },
+    ],
     review: testimonials.map((testimonial) => ({
       "@type": "Review",
       reviewBody: testimonial.quote,
@@ -112,7 +126,7 @@ export function webPageJsonLd() {
     "@type": "WebPage",
     "@id": `${siteUrl}/#webpage`,
     url: siteUrl,
-    name: `House Cleaning Hales Corners WI | ${business.name}`,
+    name: `House Cleaning Hales Corners & Milwaukee County | ${business.name}`,
     description: business.tagline,
     isPartOf: { "@id": `${siteUrl}/#website` },
     about: { "@id": `${siteUrl}/#organization` },

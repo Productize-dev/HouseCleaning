@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Mail, MapPin, Phone, Sparkles } from "lucide-react";
+import { Calendar, Mail, MapPin, Phone, Sparkles } from "lucide-react";
 
 import { FadeIn } from "@/components/motion/fade-in";
 import { buttonVariants } from "@/components/ui/button";
@@ -46,12 +46,12 @@ export function ContactCta() {
                   Ready for a Spotless Home or Office?
                 </h2>
                 <p className="mt-4 text-lg text-primary-foreground/90">
-                  Call today for a free estimate — serving homes and businesses
-                across Hales Corners and {business.serviceRegion}.
+                  Call or book online for a free in-home estimate — serving{" "}
+                  {business.serviceRegion} from our Hales Corners home base.
                 </p>
               </div>
 
-              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
                 <a
                   href={business.phoneHref}
                   className={cn(
@@ -61,6 +61,18 @@ export function ContactCta() {
                 >
                   <Phone className="size-5" aria-hidden />
                   {business.phone}
+                </a>
+                <a
+                  href={business.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    buttonVariants({ size: "lg" }),
+                    "h-13 gap-2 bg-brand px-8 text-base font-semibold text-white hover:bg-brand/90"
+                  )}
+                >
+                  <Calendar className="size-5" aria-hidden />
+                  Book Online
                 </a>
                 <a
                   href={business.emailHref}

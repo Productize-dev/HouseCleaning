@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 
 import { FadeIn } from "@/components/motion/fade-in";
 import { SectionHeader } from "@/components/landing/section-header";
-import { business, values } from "@/lib/business";
+import { business, heroServiceCities, values } from "@/lib/business";
 import { stockImages } from "@/lib/images";
 
 export function About() {
@@ -20,38 +21,55 @@ export function About() {
               align="left"
               eyebrow="About Us"
               title="Our Story"
-              description={`Based at ${business.address.full}, ${business.shortName} serves homes and businesses across ${business.serviceRegion}. Whether you need maid service, house cleaning near Hales Corners, office cleaning, or clinic cleaning — we bring professional crews and supplies to every visit.`}
+              description={`Locally owned and based at ${business.address.full}, ${business.shortName} serves ${heroServiceCities}.`}
             />
 
             <div className="mt-8 space-y-5 text-muted-foreground">
-              <p className="leading-relaxed">{business.nextdoorStory}</p>
-
-              <div className="rounded-2xl border border-border bg-card/80 p-5 backdrop-blur-sm">
-                <p className="leading-relaxed">
-                  <span className="font-semibold text-foreground">
-                    Our Mission:
-                  </span>{" "}
-                  {business.mission}
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-card/80 p-5 backdrop-blur-sm">
-                <p className="leading-relaxed">
-                  <span className="font-semibold text-foreground">
-                    Our Vision:
-                  </span>{" "}
-                  {business.vision}
-                </p>
-              </div>
-
-              <p className="leading-relaxed">
-                <span className="font-semibold text-foreground">
-                  Our Values:
-                </span>{" "}
-                {business.valuesStatement}
+              <p className="text-lg leading-relaxed text-foreground">
+                {business.nextdoorStory}
               </p>
 
+              {business.storyParagraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)} className="leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl border border-border bg-card/80 p-5 backdrop-blur-sm">
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">
+                    Our Mission
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed">
+                    {business.mission}
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-border bg-card/80 p-5 backdrop-blur-sm">
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">
+                    Our Vision
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed">
+                    {business.vision}
+                  </p>
+                </div>
+              </div>
+
               <p className="leading-relaxed">{business.nextdoorClosing}</p>
+
+              <p className="text-sm">
+                See what neighbors are saying on{" "}
+                <a
+                  href={business.nextdoorUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-semibold text-primary hover:underline"
+                >
+                  Nextdoor
+                  <ExternalLink className="size-3.5" aria-hidden />
+                </a>
+                .
+              </p>
             </div>
 
             <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">

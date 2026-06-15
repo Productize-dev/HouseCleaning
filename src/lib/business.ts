@@ -32,16 +32,24 @@ export const business = {
   instagramUrl: "https://www.instagram.com/fresh_cleaning_place75/",
   googleMapsUrl:
     "https://www.google.com/maps/search/?api=1&query=11421+W+Abbott+Ave,+Hales+Corners,+WI+53130",
+  bookingUrl:
+    "https://cal.com/fresh-cleaning-schedule-v9nskv/30min",
+  bookingLabel: "Schedule Free In-Home Estimate",
   satisfaction: "100% satisfaction guaranteed on every visit",
   nextdoorStory:
-    "Specialized in Residential and Commercial cleaning!! providing quality, guarantee and reliability. is a company that provides the best service to our clients.",
+    "Fresh Cleaning Place LLC is a locally owned cleaning company based in Hales Corners, Wisconsin. What started as a commitment to neighbors who needed reliable help at home has grown into a full residential and commercial cleaning service trusted across southeastern Wisconsin.",
+  storyParagraphs: [
+    "Led by owner Jacky, our team brings the same care to every visit — whether it's a weekly house clean in Greenfield, a deep clean before a move in Muskego, or recurring office and clinic maintenance in Milwaukee County.",
+    "We serve homes and businesses throughout Milwaukee, Kenosha, Racine, and Waukesha Counties, with professional crews who arrive on time, communicate clearly, and bring their own supplies to every job.",
+    "From kitchens and bathrooms to commercial restrooms, dental offices, and building common areas, we focus on results you can see and service you can trust.",
+  ] as const,
   mission:
-    "is to offer our clients a guarantee and the best satisfaction of our work, with great dedication and performance.",
+    "To deliver spotless spaces and peace of mind — with guaranteed satisfaction, dedicated crews, and outstanding communication on every visit.",
   vision:
-    "to reach many residential and commercial to offer the best cleaning service.",
+    "To be the cleaning company families and businesses across southeastern Wisconsin call first — known for quality, reliability, and treating every property with respect.",
   valuesStatement: "Loyalty, responsibility, and trust.",
   nextdoorClosing:
-    "thanks to our clients for all their trust. Committed to our clients. The best place. Fresh Cleaning Place!!!!",
+    "We're proud to be a Neighborhood Favorite on Nextdoor, with clients in Hales Corners, Muskego, North Prairie, Burlington, and communities across the region recommending us for thorough, dependable cleaning. Fresh Cleaning Place — the best place for a fresh start.",
 } as const;
 
 export const navLinks = [
@@ -167,6 +175,13 @@ export const serviceAreas = serviceCounties.flatMap(
 
 export const serviceAreaSummary =
   "35 cities across Milwaukee, Kenosha, Racine, and Waukesha Counties — including Milwaukee, Hales Corners, Greenfield, Kenosha, Racine, Waukesha, Brookfield, Muskego, North Prairie, Caledonia, and more.";
+
+/** SEO-friendly hero geography — primary city + broader region */
+export const heroServiceArea =
+  "Hales Corners, Milwaukee County & Southeastern Wisconsin";
+
+export const heroServiceCities =
+  "Milwaukee, Greenfield, West Allis, Kenosha, Racine, Waukesha, Brookfield & surrounding communities";
 
 export const residentialServices = [
   {

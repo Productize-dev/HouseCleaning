@@ -27,9 +27,9 @@ const outfit = Outfit({
 });
 
 const title =
-  "Cleaning Services Hales Corners WI | Fresh Cleaning Place LLC";
+  "Cleaning Services Hales Corners & Milwaukee County | Fresh Cleaning Place LLC";
 const description =
-  `Residential & commercial cleaning across Milwaukee, Kenosha, Racine & Waukesha Counties. House cleaning, offices, deep cleans & free estimates. Call ${business.phone}.`;
+  `Residential & commercial cleaning in Hales Corners, Milwaukee, Kenosha, Racine & Waukesha Counties. House cleaning, offices, deep cleans & free estimates. Call ${business.phone}.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -68,16 +68,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteUrl,
-  },
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
-      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
-    ],
-    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
-    shortcut: "/favicon.ico",
   },
   category: "House Cleaning Service",
 };

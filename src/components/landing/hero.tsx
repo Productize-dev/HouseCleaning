@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  Calendar,
   CheckCircle2,
   Mail,
   MapPin,
@@ -14,7 +15,7 @@ import {
 } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
-import { business, stats } from "@/lib/business";
+import { business, heroServiceArea, heroServiceCities, stats } from "@/lib/business";
 import { stockImages } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
@@ -59,7 +60,7 @@ export function Hero() {
             >
               <span className="inline-flex items-center gap-1.5 rounded-md border border-border bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-foreground">
                 <MapPin className="size-3.5 text-primary" aria-hidden />
-                Hales Corners, WI
+                Based in Hales Corners, WI
               </span>
               <span
                 className="hidden text-muted-foreground/40 sm:inline"
@@ -68,7 +69,7 @@ export function Hero() {
                 |
               </span>
               <span className="block text-[11px] font-bold uppercase tracking-[0.12em] text-muted-foreground sm:tracking-[0.18em]">
-                {business.serviceRegionShort}
+                Serving {business.serviceRegion}
               </span>
             </motion.div>
 
@@ -81,12 +82,12 @@ export function Hero() {
             >
               <span className="block text-[2.65rem] font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.5rem]">
                 House Cleaning Services in{" "}
-                <span className="hero-headline-accent">Hales Corners, WI</span>
+                <span className="hero-headline-accent">{heroServiceArea}</span>
               </span>
               <span className="mt-4 block border-t border-border pt-4 text-lg font-normal leading-relaxed text-muted-foreground sm:text-xl">
-                Premium residential &amp; commercial cleaning trusted across{" "}
+                Premium residential &amp; commercial cleaning for{" "}
                 <span className="font-semibold text-foreground">
-                  {business.serviceRegionShort}
+                  {heroServiceCities}
                 </span>
               </span>
             </motion.h1>
@@ -109,6 +110,7 @@ export function Hero() {
               <div className="mt-5 flex flex-wrap gap-2">
                 {[
                   "Homes & offices",
+                  "35+ cities served",
                   "Free estimates",
                   "Satisfaction guaranteed",
                 ].map((tag) => (
@@ -149,7 +151,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="mt-10 flex flex-col gap-3 sm:flex-row"
+              className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
             >
               <a
                 href={business.phoneHref}
@@ -159,8 +161,20 @@ export function Hero() {
                 )}
               >
                 <Phone className="size-5" aria-hidden />
-                Get Free Estimate
+                Call {business.phone}
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+              </a>
+              <a
+                href={business.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "h-13 gap-2 bg-brand px-8 text-base text-white shadow-sm hover:bg-brand/90"
+                )}
+              >
+                <Calendar className="size-5" aria-hidden />
+                Book Online
               </a>
               <a
                 href="#gallery"
@@ -267,25 +281,38 @@ export function Hero() {
                     </a>
                   </div>
                   <a
-                    href={business.phoneHref}
+                    href={business.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={cn(
                       buttonVariants({ size: "sm" }),
-                      "hidden shrink-0 bg-primary sm:inline-flex"
+                      "hidden shrink-0 bg-brand sm:inline-flex"
                     )}
                   >
-                    Book Now
+                    Book Online
                   </a>
                 </div>
 
                 <div className="mt-3 flex gap-2 sm:hidden">
                   <a
-                    href={business.phoneHref}
+                    href={business.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={cn(
                       buttonVariants({ size: "sm" }),
-                      "flex-1 bg-primary"
+                      "flex-1 bg-brand"
                     )}
                   >
-                    Book Now
+                    Book Online
+                  </a>
+                  <a
+                    href={business.phoneHref}
+                    className={cn(
+                      buttonVariants({ variant: "outline", size: "sm" }),
+                      "flex-1"
+                    )}
+                  >
+                    Call
                   </a>
                   <a
                     href={business.emailHref}

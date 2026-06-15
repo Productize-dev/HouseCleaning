@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, Phone } from "lucide-react";
+import { Calendar, Menu, Phone } from "lucide-react";
 
 import {
   Sheet,
@@ -54,12 +54,26 @@ export function MobileNav() {
         </nav>
         <div className="mt-8 space-y-3 border-t border-border px-4 pt-6">
           <a
+            href={business.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex w-full flex-col items-center justify-center gap-1 rounded-lg bg-brand px-4 py-3 text-white"
+          >
+            <span className="inline-flex items-center gap-2 text-sm font-semibold">
+              <Calendar className="size-4" aria-hidden />
+              Book Online
+            </span>
+            <span className="text-xs font-medium text-white/85">
+              Free in-home estimate
+            </span>
+          </a>
+          <a
             href={business.phoneHref}
             className="flex w-full flex-col items-center justify-center gap-1 rounded-lg bg-primary px-4 py-3 text-primary-foreground"
           >
             <span className="inline-flex items-center gap-2 text-sm font-semibold">
               <Phone className="size-4" aria-hidden />
-              Free Estimate
+              Call for Estimate
             </span>
             <span className="text-xs font-medium text-primary-foreground/85">
               {business.phone}

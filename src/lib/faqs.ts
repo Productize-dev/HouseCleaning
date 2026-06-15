@@ -17,7 +17,7 @@ export const homepageFaqs = [
   },
   {
     question: "How do I get a cleaning estimate?",
-    answer: `Call ${business.phone} or email ${business.email} for a free estimate. We offer house cleaning, commercial cleaning, deep cleaning, window cleaning, and home organizing with flexible scheduling.`,
+    answer: `Call ${business.phone}, email ${business.email}, or book a free in-home estimate online at ${business.bookingUrl.replace("https://", "")}. We offer house cleaning, commercial cleaning, deep cleaning, window cleaning, and home organizing with flexible scheduling.`,
   },
   {
     question: "Do you offer recurring cleaning?",
