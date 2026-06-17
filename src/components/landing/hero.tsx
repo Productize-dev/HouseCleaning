@@ -81,11 +81,11 @@ export function Hero() {
               className="mt-5"
             >
               <span className="block text-[2.65rem] font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.5rem]">
-                House Cleaning Services in{" "}
+                Residential &amp; Commercial Cleaning in{" "}
                 <span className="hero-headline-accent">{heroServiceArea}</span>
               </span>
               <span className="mt-4 block border-t border-border pt-4 text-lg font-normal leading-relaxed text-muted-foreground sm:text-xl">
-                Premium residential &amp; commercial cleaning for{" "}
+                Homes, offices, clinics &amp; facilities across{" "}
                 <span className="font-semibold text-foreground">
                   {heroServiceCities}
                 </span>
