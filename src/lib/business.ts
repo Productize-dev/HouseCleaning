@@ -24,7 +24,10 @@ export const business = {
     "Trusted by neighbors and businesses across Milwaukee, Kenosha, Racine, and Waukesha Counties",
   serviceRegion: "Milwaukee, Kenosha, Racine, and Waukesha Counties",
   serviceRegionShort: "4-county service area",
-  promo: "20% OFF your first cleaning — new clients",
+  promo:
+    "Guest-ready before Thanksgiving — 20% OFF your first deep clean",
+  /** Toggle autumn leaf accents without touching SEO content */
+  showSeasonalDecor: true,
   nextdoorUrl:
     "https://nextdoor.com/page/fresh-cleaning-greenfield-wi",
   facebookUrl:

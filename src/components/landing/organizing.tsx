@@ -17,7 +17,7 @@ export function Organizing() {
       className="section-padding bg-white"
     >
       <div className="container-narrow">
-        <div className="relative overflow-hidden rounded-[2rem] border border-primary/15 shadow-[var(--shadow-card)]">
+        <div className="relative overflow-hidden rounded-[2rem] border border-brand/20 shadow-[var(--shadow-card)]">
           <div className="grid lg:grid-cols-2">
             <FadeIn className="relative min-h-[320px] lg:min-h-full">
               <Image

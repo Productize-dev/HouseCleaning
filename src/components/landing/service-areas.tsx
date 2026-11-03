@@ -12,9 +12,9 @@ export function ServiceAreas() {
     <section
       id="areas"
       aria-labelledby="areas-heading"
-      className="section-padding relative overflow-hidden"
+      className="section-padding relative overflow-hidden bg-white"
     >
-      <div className="pointer-events-none absolute left-0 top-1/2 size-72 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
+      <div className="pointer-events-none absolute left-0 top-1/2 size-72 -translate-y-1/2 rounded-full bg-brand/10 blur-3xl" />
       <div className="container-narrow relative">
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
           <FadeIn>

@@ -1,90 +1,110 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
   Calendar,
   CheckCircle2,
-  Mail,
   MapPin,
   Phone,
-  ShieldCheck,
-  Sparkles,
   Star,
 } from "lucide-react";
 
+import { Leaf } from "@/components/seasonal/leaf";
+import { LeafField } from "@/components/seasonal/leaf-field";
 import { buttonVariants } from "@/components/ui/button";
-import { business, heroServiceArea, heroServiceCities, stats } from "@/lib/business";
+import {
+  business,
+  heroServiceArea,
+  heroServiceCities,
+  stats,
+} from "@/lib/business";
 import { stockImages } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
-const highlights = [
-  "Residential & commercial cleaning",
-  "Weekly, biweekly & monthly plans",
-  "Deep cleans & home organizing",
-  "Supplies & tools included",
+const trustLine = [
+  "Supplies included",
+  "Residential & commercial",
+  "Free estimates",
 ] as const;
 
 export function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative min-h-[92vh] overflow-hidden bg-background"
+      className="relative overflow-hidden bg-white"
     >
-      {/* Subtle left rule — flat background, no gradients */}
+      <div className="mesh-bg pointer-events-none absolute inset-0 opacity-80" aria-hidden />
       <div
-        className="pointer-events-none absolute inset-y-0 left-0 w-px bg-border"
+        className="orange-glow right-[-10%] top-[-8%] size-[320px] sm:size-[420px]"
         aria-hidden
       />
+      {business.showSeasonalDecor && (
+        <LeafField density="hero" className="opacity-50" />
+      )}
 
-      <div className="container-narrow relative flex min-h-[92vh] flex-col justify-center py-24 lg:py-28">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Copy */}
-          <div className="max-w-xl lg:max-w-none">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 rounded-md border border-border bg-white px-4 py-2 text-sm font-semibold text-foreground shadow-sm"
-            >
-              <Sparkles className="size-4 shrink-0 text-primary" aria-hidden />
-              {business.promo}
-            </motion.div>
-
+      <div className="container-narrow relative z-10 py-16 sm:py-20 lg:py-24">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+          {/* Copy column */}
+          <div className="relative max-w-xl lg:max-w-none">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.08 }}
-              className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2"
+              transition={{ duration: 0.5 }}
             >
-              <span className="inline-flex items-center gap-1.5 rounded-md border border-border bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-foreground">
-                <MapPin className="size-3.5 text-primary" aria-hidden />
-                Based in Hales Corners, WI
-              </span>
-              <span
-                className="hidden text-muted-foreground/40 sm:inline"
-                aria-hidden
-              >
-                |
-              </span>
-              <span className="block text-[11px] font-bold uppercase tracking-[0.12em] text-muted-foreground sm:tracking-[0.18em]">
-                Serving {business.serviceRegion}
-              </span>
+              <Link href="/services/deep-cleaning" className="promo-chip group">
+                {business.showSeasonalDecor && (
+                  <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-brand/15">
+                    <Leaf variant="maple" tone="brand" className="size-4" />
+                  </span>
+                )}
+                <span className="min-w-0">{business.promo}</span>
+                <ArrowRight className="size-4 shrink-0 text-brand transition-transform group-hover:translate-x-0.5" />
+              </Link>
             </motion.div>
 
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="mt-7 flex items-center gap-3"
+            >
+              <div className="rounded-xl border border-border bg-white p-1.5 shadow-sm">
+                <Image
+                  src="/images/logo.png"
+                  alt=""
+                  width={48}
+                  height={48}
+                  className="size-11 object-contain sm:size-12"
+                  priority
+                />
+              </div>
+              <div>
+                <p className="text-lg font-bold tracking-tight text-foreground sm:text-xl">
+                  {business.shortName}
+                </p>
+                <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-brand">
+                  <MapPin className="size-3.5" aria-hidden />
+                  Hales Corners, WI
+                </p>
+              </div>
+            </motion.div>
+
+            {/* SEO H1 — unchanged wording */}
             <motion.h1
               id="hero-heading"
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, delay: 0.12 }}
-              className="mt-5"
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mt-7"
             >
-              <span className="block text-[2.65rem] font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.5rem]">
+              <span className="block text-[2.35rem] font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-[3.2rem]">
                 Residential &amp; Commercial Cleaning in{" "}
                 <span className="hero-headline-accent">{heroServiceArea}</span>
               </span>
-              <span className="mt-4 block border-t border-border pt-4 text-lg font-normal leading-relaxed text-muted-foreground sm:text-xl">
+              <span className="mt-5 block border-t border-border pt-4 text-base font-normal leading-relaxed text-muted-foreground sm:text-lg">
                 Homes, offices, clinics &amp; facilities across{" "}
                 <span className="font-semibold text-foreground">
                   {heroServiceCities}
@@ -92,72 +112,48 @@ export function Hero() {
               </span>
             </motion.h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.22 }}
-              className="hero-lead-block mt-8 border-l-4 border-l-primary pl-5 sm:pl-6"
+              transition={{ duration: 0.5, delay: 0.18 }}
+              className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
             >
-              <p className="text-lg font-semibold leading-snug text-foreground sm:text-xl">
-                Spotless homes and businesses — supplies included on every visit.
-              </p>
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                {business.name} serves {business.serviceRegion} with thorough
-                residential and commercial cleaning. Same trusted crew, clear
-                communication, and results you can see from the moment you walk
-                in.
-              </p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {[
-                  "Homes & offices",
-                  "35+ cities served",
-                  "Free estimates",
-                  "Satisfaction guaranteed",
-                ].map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-md border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-foreground"
-                    >
-                      {tag}
-                    </span>
-                ))}
-              </div>
-            </motion.div>
+              {business.name} serves {business.serviceRegion} with thorough
+              residential and commercial cleaning — supplies included, same
+              trusted crew, results you can see.
+            </motion.p>
 
             <motion.ul
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.35 }}
-              className="mt-8 grid gap-2.5 sm:grid-cols-2"
+              transition={{ delay: 0.24 }}
+              className="mt-6 flex flex-wrap gap-x-4 gap-y-2"
             >
-              {highlights.map((item, i) => (
-                <motion.li
+              {trustLine.map((item) => (
+                <li
                   key={item}
-                  initial={{ opacity: 0, x: -12 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4 + i * 0.08 }}
-                  className="flex items-center gap-2.5 rounded-lg border border-border bg-white px-3 py-2.5 text-sm font-medium text-foreground"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground"
                 >
                   <CheckCircle2
-                    className="size-4 shrink-0 text-fresh"
+                    className="size-4 shrink-0 text-brand"
                     aria-hidden
                   />
                   {item}
-                </motion.li>
+                </li>
               ))}
             </motion.ul>
 
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
+              transition={{ delay: 0.3 }}
+              className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
             >
               <a
                 href={business.phoneHref}
                 className={cn(
                   buttonVariants({ size: "lg" }),
-                  "group h-13 gap-2 bg-primary px-8 text-base shadow-sm hover:bg-primary/90"
+                  "group h-13 gap-2 bg-gradient-to-r from-brand to-amber px-8 text-base text-white shadow-[var(--shadow-glow)] hover:opacity-95"
                 )}
               >
                 <Phone className="size-5" aria-hidden />
@@ -170,179 +166,100 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className={cn(
                   buttonVariants({ size: "lg" }),
-                  "h-13 gap-2 bg-brand px-8 text-base text-white shadow-sm hover:bg-brand/90"
+                  "h-13 gap-2 bg-primary px-8 text-base text-white hover:bg-primary/90"
                 )}
               >
                 <Calendar className="size-5" aria-hidden />
                 Book Online
-              </a>
-              <a
-                href="#gallery"
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "lg" }),
-                  "h-13 border-border bg-white px-8 text-base hover:bg-secondary/50"
-                )}
-              >
-                See Before & After
               </a>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.65 }}
-              className="mt-8 inline-flex items-center gap-2 rounded-lg border border-border bg-white px-4 py-3 shadow-sm"
+              transition={{ delay: 0.38 }}
+              className="mt-7 inline-flex items-center gap-2.5 rounded-full border border-border bg-white px-4 py-2.5 shadow-sm"
             >
-              <div className="flex text-amber-500" aria-hidden>
+              <div className="flex text-amber" aria-hidden>
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="size-4 fill-current" />
                 ))}
               </div>
-              <p className="text-sm font-medium">
+              <p className="text-sm font-medium text-foreground">
                 Top-rated on{" "}
                 <span className="font-semibold text-brand">Nextdoor</span>
               </p>
             </motion.div>
           </div>
 
-          {/* Photo collage + quote card */}
+          {/* Clean photo panel */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.96, y: 30 }}
+            initial={{ opacity: 0, scale: 0.97, y: 24 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
+            transition={{ duration: 0.65, delay: 0.2 }}
             className="relative mx-auto w-full max-w-lg lg:max-w-none"
           >
-            {/* Main hero image */}
-            <div className="image-frame relative aspect-[4/5] sm:aspect-[5/6]">
+            {business.showSeasonalDecor && (
+              <>
+                <Leaf
+                  variant="maple"
+                  tone="brand"
+                  className="absolute -right-2 -top-3 z-20 size-12 rotate-[16deg] opacity-80 animate-leaf-drift sm:size-16"
+                />
+                <Leaf
+                  variant="oak"
+                  tone="amber"
+                  className="absolute -bottom-3 -left-2 z-20 size-10 -rotate-[18deg] opacity-70 animate-leaf-drift-delayed sm:size-14"
+                />
+              </>
+            )}
+
+            <div className="image-frame relative aspect-[4/5] ring-1 ring-brand/15 sm:aspect-[5/6]">
               <Image
-                src={stockImages.mirrorDetail.src}
-                alt={stockImages.mirrorDetail.alt}
+                src={stockImages.bedroomCleaning.src}
+                alt={stockImages.bedroomCleaning.alt}
                 fill
-                className="object-cover"
                 priority
+                className="object-cover"
                 sizes="(max-width: 1024px) 90vw, 45vw"
               />
-              <div className="absolute inset-x-0 bottom-0 h-2/5 bg-foreground/50" aria-hidden />
+              <div
+                className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white/90 via-white/40 to-transparent"
+                aria-hidden
+              />
 
-              {/* Floating accent photo */}
-              <div className="absolute -left-4 top-8 hidden w-32 overflow-hidden rounded-2xl border-4 border-white shadow-[var(--shadow-premium)] sm:block sm:w-36">
-                <div className="relative aspect-square">
-                  <Image
-                    src={stockImages.suppliesCaddy.src}
-                    alt={stockImages.suppliesCaddy.alt}
-                    fill
-                    className="object-cover"
-                    sizes="144px"
-                  />
-                </div>
+              <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-border bg-white/95 p-4 shadow-[var(--shadow-card)] backdrop-blur-sm sm:inset-x-6 sm:bottom-6 sm:p-5">
+                <p className="text-xs font-bold uppercase tracking-wider text-brand">
+                  Guest-ready homes
+                </p>
+                <p className="mt-1 text-sm font-medium text-foreground sm:text-base">
+                  Spotless spaces before Thanksgiving — book your deep clean
+                  today.
+                </p>
+                <Link
+                  href="/services/deep-cleaning"
+                  className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline"
+                >
+                  Deep cleaning details
+                  <ArrowRight className="size-3.5" aria-hidden />
+                </Link>
               </div>
-
-              {/* Glass quote card — overlaid on photo */}
-              <aside
-                aria-label="Request a quote"
-                className="absolute inset-x-4 bottom-4 rounded-xl border border-border bg-white p-5 shadow-[var(--shadow-premium)] sm:inset-x-6 sm:bottom-6 sm:p-6"
-              >
-                <div className="flex items-center gap-3">
-                  <Image
-                    src="/images/logo.png"
-                    alt={`${business.name} logo`}
-                    width={48}
-                    height={48}
-                    className="size-12 object-contain"
-                  />
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-wider text-brand">
-                      Free estimate
-                    </p>
-                    <p className="font-semibold">{business.shortName}</p>
-                  </div>
-                </div>
-
-                <div className="mt-4 flex items-start gap-2 rounded-lg border border-border bg-secondary/60 px-3 py-2.5">
-                  <ShieldCheck
-                    className="mt-0.5 size-4 shrink-0 text-primary"
-                    aria-hidden
-                  />
-                  <p className="text-xs font-medium leading-snug text-primary sm:text-sm">
-                    {business.satisfaction}
-                  </p>
-                </div>
-
-                <div className="mt-4 flex items-end justify-between gap-4">
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-                      Call or text
-                    </p>
-                    <a
-                      href={business.phoneHref}
-                      className="text-xl font-bold tabular-nums text-primary hover:underline sm:text-2xl lg:text-3xl"
-                    >
-                      {business.phone}
-                    </a>
-                  </div>
-                  <a
-                    href={business.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cn(
-                      buttonVariants({ size: "sm" }),
-                      "hidden shrink-0 bg-brand sm:inline-flex"
-                    )}
-                  >
-                    Book Online
-                  </a>
-                </div>
-
-                <div className="mt-3 flex gap-2 sm:hidden">
-                  <a
-                    href={business.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={cn(
-                      buttonVariants({ size: "sm" }),
-                      "flex-1 bg-brand"
-                    )}
-                  >
-                    Book Online
-                  </a>
-                  <a
-                    href={business.phoneHref}
-                    className={cn(
-                      buttonVariants({ variant: "outline", size: "sm" }),
-                      "flex-1"
-                    )}
-                  >
-                    Call
-                  </a>
-                  <a
-                    href={business.emailHref}
-                    className={cn(
-                      buttonVariants({ variant: "outline", size: "sm" }),
-                      "gap-1"
-                    )}
-                  >
-                    <Mail className="size-3.5" aria-hidden />
-                    Email
-                  </a>
-                </div>
-              </aside>
             </div>
           </motion.div>
         </div>
 
-        {/* Stats strip */}
         <motion.ul
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-16 grid grid-cols-2 gap-4 border-t border-border pt-10 sm:grid-cols-4"
+          transition={{ delay: 0.42 }}
+          className="mt-14 grid grid-cols-2 gap-3 border-t border-border pt-10 sm:grid-cols-4 sm:gap-4"
         >
           {stats.map((stat) => (
             <li
               key={stat.label}
-              className="rounded-xl border border-border bg-white px-4 py-5 text-center shadow-sm"
+              className="rounded-2xl border border-border bg-white px-4 py-5 text-center shadow-sm"
             >
-              <p className="text-2xl font-bold text-primary sm:text-3xl">
+              <p className="text-2xl font-bold text-brand sm:text-3xl">
                 {stat.value}
               </p>
               <p className="mt-1 text-xs font-medium text-muted-foreground sm:text-sm">

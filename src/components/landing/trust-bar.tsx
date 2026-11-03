@@ -16,7 +16,7 @@ export function TrustBar() {
   return (
     <section
       aria-label="Why customers trust us"
-      className="relative overflow-hidden border-y border-primary/10 bg-white py-16"
+      className="relative overflow-hidden border-y border-border section-alt py-16"
     >
       <div className="dot-pattern pointer-events-none absolute inset-0 opacity-30" />
       <div className="container-narrow relative">
@@ -26,7 +26,7 @@ export function TrustBar() {
             return (
               <StaggerItem key={point.title}>
                 <div className="group h-full rounded-2xl border border-border/80 bg-gradient-to-br from-white to-secondary/50 p-6 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]">
-                  <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-fresh text-white shadow-md transition-transform group-hover:scale-110">
+                  <div className="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary via-fresh to-amber text-white shadow-md transition-transform group-hover:scale-110">
                     <Icon className="size-5" aria-hidden />
                   </div>
                   <h3 className="mt-4 font-semibold">{point.title}</h3>

@@ -13,7 +13,7 @@ export function Faq() {
     <section
       id="faq"
       aria-labelledby="faq-heading"
-      className="section-padding bg-muted/30"
+      className="section-padding section-alt"
     >
       <div className="container-narrow">
         <SectionHeader

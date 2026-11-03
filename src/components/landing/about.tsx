@@ -11,7 +11,7 @@ export function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="section-padding relative overflow-hidden bg-gradient-to-b from-background to-secondary/40"
+      className="section-padding relative overflow-hidden section-alt"
     >
       <div className="container-narrow">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">

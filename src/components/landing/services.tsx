@@ -182,7 +182,7 @@ export function Services() {
     <section
       id="services"
       aria-labelledby="services-heading"
-      className="section-padding relative overflow-hidden bg-secondary/30"
+      className="section-padding relative overflow-hidden section-alt"
     >
       <div className="container-narrow relative">
         <SectionHeader

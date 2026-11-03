@@ -33,7 +33,7 @@ export function SectionHeader({
             "inline-flex items-center rounded-full border px-4 py-1.5 text-xs font-bold uppercase tracking-widest",
             dark
               ? "border-white/20 bg-white/10 text-white"
-              : "border-primary/20 bg-primary/5 text-primary"
+              : "border-brand/25 bg-accent/80 text-brand"
           )}
         >
           {eyebrow}

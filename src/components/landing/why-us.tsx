@@ -21,7 +21,7 @@ export function WhyUs() {
       aria-labelledby="why-us-heading"
       className="section-padding relative overflow-hidden bg-white"
     >
-      <div className="pointer-events-none absolute -right-40 top-0 size-[500px] rounded-full bg-fresh/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-40 top-0 size-[500px] rounded-full bg-brand/10 blur-3xl" />
 
       <div className="container-narrow relative">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
@@ -40,7 +40,7 @@ export function WhyUs() {
                 return (
                   <StaggerItem key={value.title}>
                     <article className="group flex gap-4 rounded-2xl border border-border bg-gradient-to-r from-secondary/40 to-white p-5 shadow-sm transition-all hover:border-primary/25 hover:shadow-md">
-                      <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-primary text-white shadow-md">
+                      <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-amber text-white shadow-md">
                         <Icon className="size-5" aria-hidden />
                       </div>
                       <div>

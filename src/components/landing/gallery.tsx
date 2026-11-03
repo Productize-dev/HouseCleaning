@@ -6,7 +6,7 @@ export function Gallery() {
     <section
       id="gallery"
       aria-labelledby="gallery-heading"
-      className="section-padding relative overflow-hidden bg-gradient-to-b from-muted/50 to-background"
+      className="section-padding relative overflow-hidden bg-white"
     >
       <div className="dot-pattern pointer-events-none absolute inset-0 opacity-25" />
       <div className="container-narrow relative">

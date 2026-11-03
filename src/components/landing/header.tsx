@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Clock, Mail, Phone, Sparkles } from "lucide-react";
+import { Clock, Mail, Phone } from "lucide-react";
 
 import { MobileNav } from "@/components/landing/mobile-nav";
+import { Leaf } from "@/components/seasonal/leaf";
 import { buttonVariants } from "@/components/ui/button";
 import { business, navLinks } from "@/lib/business";
 import { cn } from "@/lib/utils";
@@ -10,12 +11,17 @@ import { cn } from "@/lib/utils";
 export function Header() {
   return (
     <header className="sticky top-0 z-50">
-      <div className="hidden border-b border-white/10 bg-gradient-to-r from-brand to-primary text-white sm:block">
+      <div className="hidden border-b border-white/10 bg-gradient-to-r from-brand via-amber to-brand text-white sm:block">
         <div className="container-narrow flex h-9 items-center justify-between text-xs">
-          <p className="inline-flex items-center gap-1.5 font-medium">
-            <Sparkles className="size-3.5" aria-hidden />
+          <Link
+            href="/services/deep-cleaning"
+            className="inline-flex items-center gap-1.5 font-medium hover:underline"
+          >
+            {business.showSeasonalDecor && (
+              <Leaf variant="maple" className="size-3.5 text-[#f0d9a8]" />
+            )}
             {business.promo}
-          </p>
+          </Link>
           <div className="flex items-center gap-4 text-white/90">
             <a
               href={business.phoneHref}
@@ -65,7 +71,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary"
+                className="rounded-lg px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-brand"
               >
                 {link.label}
               </Link>
@@ -78,7 +84,7 @@ export function Header() {
               aria-label={`Call ${business.phone} for a free estimate`}
               className={cn(
                 buttonVariants({ size: "sm" }),
-                "inline-flex gap-1.5 bg-gradient-to-r from-primary to-fresh px-3 text-white shadow-md hover:opacity-90 sm:px-4"
+                "inline-flex gap-1.5 bg-gradient-to-r from-brand to-amber px-3 text-white shadow-md hover:opacity-90 sm:px-4"
               )}
             >
               <Phone className="size-4 shrink-0" aria-hidden />

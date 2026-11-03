@@ -126,7 +126,7 @@ export function ContentBlocks({
       </section>
 
       <section
-        className="mt-12 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/10 to-brand/5 p-8 text-center"
+        className="mt-12 rounded-3xl border border-brand/25 bg-gradient-to-br from-white via-accent/50 to-secondary p-8 text-center"
         aria-label="Call to action"
       >
         <h2 className="text-xl font-semibold">Ready to book?</h2>

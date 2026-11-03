@@ -11,9 +11,9 @@ export function Reviews() {
     <section
       id="reviews"
       aria-labelledby="reviews-heading"
-      className="section-padding relative overflow-hidden"
+      className="section-padding relative overflow-hidden bg-white"
     >
-      <div className="pointer-events-none absolute right-0 top-0 size-80 rounded-full bg-fresh/15 blur-3xl" />
+      <div className="pointer-events-none absolute right-0 top-0 size-80 rounded-full bg-brand/10 blur-3xl" />
       <div className="container-narrow relative">
         <SectionHeader
           id="reviews-heading"
@@ -24,7 +24,7 @@ export function Reviews() {
 
         <FadeIn className="mt-8 flex flex-col items-center justify-center gap-3">
           <div
-            className="flex items-center gap-1 text-amber-500"
+            className="flex items-center gap-1 text-amber"
             aria-label="5 out of 5 stars"
           >
             {Array.from({ length: 5 }).map((_, i) => (

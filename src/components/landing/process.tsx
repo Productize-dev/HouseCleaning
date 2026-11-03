@@ -12,9 +12,9 @@ export function Process() {
     <section
       id="process"
       aria-labelledby="process-heading"
-      className="section-padding relative overflow-hidden"
+      className="section-padding relative overflow-hidden section-alt"
     >
-      <div className="dot-pattern pointer-events-none absolute inset-0 opacity-15" />
+      <div className="dot-pattern pointer-events-none absolute inset-0 opacity-20" />
 
       <div className="container-narrow relative">
         <div className="grid items-start gap-14 lg:grid-cols-[1fr_340px] lg:gap-16">
@@ -29,7 +29,7 @@ export function Process() {
 
             <ol className="relative mt-12 flex flex-col gap-6 sm:gap-8">
               <div
-                className="absolute bottom-8 left-7 top-8 hidden w-0.5 bg-gradient-to-b from-primary via-fresh to-brand lg:block"
+                className="absolute bottom-8 left-7 top-8 hidden w-0.5 bg-gradient-to-b from-primary via-fresh to-amber lg:block"
                 aria-hidden
               />
               {processSteps.map((item, index) => (
