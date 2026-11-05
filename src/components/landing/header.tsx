@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 export function Header() {
   return (
     <header className="sticky top-0 z-50">
-      <div className="hidden border-b border-white/10 bg-gradient-to-r from-brand via-amber to-brand text-white sm:block">
+      <div className="hidden border-b border-brand/20 bg-brand text-white sm:block">
         <div className="container-narrow flex h-9 items-center justify-between text-xs">
           <Link
             href="/services/deep-cleaning"
@@ -84,7 +84,7 @@ export function Header() {
               aria-label={`Call ${business.phone} for a free estimate`}
               className={cn(
                 buttonVariants({ size: "sm" }),
-                "inline-flex gap-1.5 bg-gradient-to-r from-brand to-amber px-3 text-white shadow-md hover:opacity-90 sm:px-4"
+                "inline-flex gap-1.5 bg-brand px-3 text-white shadow-md hover:bg-brand/90 sm:px-4"
               )}
             >
               <Phone className="size-4 shrink-0" aria-hidden />

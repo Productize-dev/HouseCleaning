@@ -35,7 +35,7 @@ export function ServiceAreas() {
           </FadeIn>
 
           <FadeIn delay={0.15}>
-            <div className="rounded-3xl border border-border bg-gradient-to-br from-white to-secondary/50 p-6 shadow-[var(--shadow-card)] sm:p-8">
+            <div className="rounded-3xl border border-border bg-white p-6 shadow-[var(--shadow-card)] sm:p-8">
               <h3 className="flex items-center gap-2 text-lg font-semibold">
                 <MapPin className="size-5 text-primary" aria-hidden />
                 Cities We Serve

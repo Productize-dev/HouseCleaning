@@ -109,8 +109,8 @@ export function About() {
               </div>
               <div className="image-frame relative aspect-square">
                 <Image
-                  src="/images/flyer-promo.png"
-                  alt="Fresh Cleaning Place summer cleaning flyer — 20% off first cleaning"
+                  src="/images/flyer-thanksgiving.jpg"
+                  alt="Fresh Cleaning Place Thanksgiving cleaning flyer — 20% off first cleaning"
                   fill
                   className="object-cover object-top"
                   sizes="250px"

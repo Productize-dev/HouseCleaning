@@ -65,7 +65,7 @@ export function Reviews() {
         <StaggerChildren className="mt-12 grid gap-6 md:grid-cols-2">
           {testimonials.map((testimonial) => (
             <StaggerItem key={testimonial.quote.slice(0, 48)}>
-              <blockquote className="flex h-full flex-col rounded-3xl border border-border bg-gradient-to-br from-white to-secondary/30 p-8 shadow-[var(--shadow-card)]">
+              <blockquote className="flex h-full flex-col rounded-3xl border border-border bg-white p-8 shadow-[var(--shadow-card)]">
                 <Quote className="size-10 text-primary/25" aria-hidden />
                 <p className="mt-4 flex-1 text-lg leading-relaxed">
                   &ldquo;{testimonial.quote}&rdquo;

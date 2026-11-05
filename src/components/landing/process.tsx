@@ -29,7 +29,7 @@ export function Process() {
 
             <ol className="relative mt-12 flex flex-col gap-6 sm:gap-8">
               <div
-                className="absolute bottom-8 left-7 top-8 hidden w-0.5 bg-gradient-to-b from-primary via-fresh to-amber lg:block"
+                className="absolute bottom-8 left-7 top-8 hidden w-0.5 bg-brand/30 lg:block"
                 aria-hidden
               />
               {processSteps.map((item, index) => (

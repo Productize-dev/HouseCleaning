@@ -19,7 +19,7 @@ export function ContactCta() {
     >
       <div className="container-narrow">
         <FadeIn>
-          <div className="relative overflow-hidden rounded-[2rem] border border-brand/20 bg-gradient-to-br from-white via-accent/40 to-secondary shadow-[var(--shadow-premium)]">
+          <div className="relative overflow-hidden rounded-[2rem] border border-brand/20 bg-accent shadow-[var(--shadow-premium)]">
             {business.showSeasonalDecor && (
               <LeafField density="band" className="opacity-40" />
             )}
@@ -53,7 +53,7 @@ export function ContactCta() {
                   href={business.phoneHref}
                   className={cn(
                     buttonVariants({ size: "lg" }),
-                    "shine h-13 gap-2 bg-gradient-to-r from-brand to-amber px-8 text-base font-semibold text-white shadow-[var(--shadow-glow)] hover:opacity-95"
+                    "h-13 gap-2 bg-brand px-8 text-base font-semibold text-white shadow-[var(--shadow-glow)] hover:bg-brand/90"
                   )}
                 >
                   <Phone className="size-5" aria-hidden />

@@ -23,7 +23,6 @@ export function PageHero({
 }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden border-b border-border bg-white">
-      <div className="mesh-bg pointer-events-none absolute inset-0 opacity-70" aria-hidden />
       {business.showSeasonalDecor && (
         <>
           <Leaf
@@ -62,7 +61,7 @@ export function PageHero({
               href={business.phoneHref}
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "gap-2 bg-gradient-to-r from-brand to-amber text-white shadow-[var(--shadow-glow)] hover:opacity-95"
+                "gap-2 bg-brand text-white shadow-[var(--shadow-glow)] hover:bg-brand/90"
               )}
             >
               <Phone className="size-5" aria-hidden />

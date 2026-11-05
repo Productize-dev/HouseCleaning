@@ -39,8 +39,8 @@ export function WhyUs() {
                 const Icon = icons[index] ?? Sparkles;
                 return (
                   <StaggerItem key={value.title}>
-                    <article className="group flex gap-4 rounded-2xl border border-border bg-gradient-to-r from-secondary/40 to-white p-5 shadow-sm transition-all hover:border-primary/25 hover:shadow-md">
-                      <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-amber text-white shadow-md">
+                    <article className="group flex gap-4 rounded-2xl border border-border bg-white p-5 shadow-sm transition-all hover:border-brand/40 hover:shadow-md">
+                      <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-brand/20 bg-accent text-brand">
                         <Icon className="size-5" aria-hidden />
                       </div>
                       <div>

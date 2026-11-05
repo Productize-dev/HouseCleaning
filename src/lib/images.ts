@@ -5,6 +5,10 @@ export type StockImage = {
 
 /** Residential marketing photography */
 export const stockImages = {
+  thanksgivingFlyer: {
+    src: "/images/flyer-thanksgiving.jpg",
+    alt: "Fresh Cleaning Place Thanksgiving cleaning flyer — 20% off first cleaning, residential and commercial",
+  },
   bedroomCleaning: {
     src: "/images/stock/bedroom-cleaning.png",
     alt: "Professional cleaners making a bed and sweeping in a bright residential bedroom",

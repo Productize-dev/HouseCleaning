@@ -36,11 +36,6 @@ export function Hero() {
       aria-labelledby="hero-heading"
       className="relative overflow-hidden bg-white"
     >
-      <div className="mesh-bg pointer-events-none absolute inset-0 opacity-80" aria-hidden />
-      <div
-        className="orange-glow right-[-10%] top-[-8%] size-[320px] sm:size-[420px]"
-        aria-hidden
-      />
       {business.showSeasonalDecor && (
         <LeafField density="hero" className="opacity-50" />
       )}
@@ -54,14 +49,36 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <Link href="/services/deep-cleaning" className="promo-chip group">
-                {business.showSeasonalDecor && (
-                  <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-brand/15">
-                    <Leaf variant="maple" tone="brand" className="size-4" />
+              <Link
+                href="/services/deep-cleaning"
+                className="group relative flex w-full max-w-lg items-stretch overflow-hidden rounded-2xl border-2 border-brand/40 bg-accent shadow-[var(--shadow-glow)] transition hover:border-brand hover:shadow-[var(--shadow-card-hover)] sm:max-w-xl"
+              >
+                <div className="flex shrink-0 flex-col items-center justify-center bg-brand px-4 py-4 text-white sm:px-5 sm:py-5">
+                  {business.showSeasonalDecor && (
+                    <Leaf
+                      variant="maple"
+                      className="mb-1 size-5 text-[#ffe0a8] sm:size-6"
+                    />
+                  )}
+                  <span className="text-3xl font-black leading-none tracking-tight sm:text-4xl lg:text-5xl">
+                    20%
                   </span>
-                )}
-                <span className="min-w-0">{business.promo}</span>
-                <ArrowRight className="size-4 shrink-0 text-brand transition-transform group-hover:translate-x-0.5" />
+                  <span className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] sm:text-xs">
+                    Off
+                  </span>
+                </div>
+                <div className="flex min-w-0 flex-1 flex-col justify-center gap-1 px-4 py-4 sm:px-5 sm:py-5">
+                  <p className="text-base font-bold leading-snug text-foreground sm:text-lg">
+                    First cleaning — Thanksgiving special
+                  </p>
+                  <p className="text-sm leading-snug text-muted-foreground sm:text-base">
+                    Guest-ready deep clean before the holiday. New clients only.
+                  </p>
+                  <span className="mt-1 inline-flex items-center gap-1 text-sm font-semibold text-brand">
+                    Claim offer
+                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                </div>
               </Link>
             </motion.div>
 
@@ -153,7 +170,7 @@ export function Hero() {
                 href={business.phoneHref}
                 className={cn(
                   buttonVariants({ size: "lg" }),
-                  "group h-13 gap-2 bg-gradient-to-r from-brand to-amber px-8 text-base text-white shadow-[var(--shadow-glow)] hover:opacity-95"
+                  "group h-13 gap-2 bg-brand px-8 text-base text-white shadow-[var(--shadow-glow)] hover:bg-brand/90"
                 )}
               >
                 <Phone className="size-5" aria-hidden />
@@ -214,37 +231,20 @@ export function Hero() {
               </>
             )}
 
-            <div className="image-frame relative aspect-[4/5] ring-1 ring-brand/15 sm:aspect-[5/6]">
+            <Link
+              href="/services/deep-cleaning"
+              className="image-frame relative block aspect-square ring-1 ring-brand/15 transition hover:ring-brand/35"
+              aria-label="Thanksgiving cleaning special — 20% off first cleaning. Learn about deep cleaning."
+            >
               <Image
-                src={stockImages.bedroomCleaning.src}
-                alt={stockImages.bedroomCleaning.alt}
+                src={stockImages.thanksgivingFlyer.src}
+                alt={stockImages.thanksgivingFlyer.alt}
                 fill
                 priority
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="(max-width: 1024px) 90vw, 45vw"
               />
-              <div
-                className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white/90 via-white/40 to-transparent"
-                aria-hidden
-              />
-
-              <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-border bg-white/95 p-4 shadow-[var(--shadow-card)] backdrop-blur-sm sm:inset-x-6 sm:bottom-6 sm:p-5">
-                <p className="text-xs font-bold uppercase tracking-wider text-brand">
-                  Guest-ready homes
-                </p>
-                <p className="mt-1 text-sm font-medium text-foreground sm:text-base">
-                  Spotless spaces before Thanksgiving — book your deep clean
-                  today.
-                </p>
-                <Link
-                  href="/services/deep-cleaning"
-                  className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline"
-                >
-                  Deep cleaning details
-                  <ArrowRight className="size-3.5" aria-hidden />
-                </Link>
-              </div>
-            </div>
+            </Link>
           </motion.div>
         </div>
 

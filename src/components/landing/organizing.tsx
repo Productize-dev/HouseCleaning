@@ -27,10 +27,10 @@ export function Organizing() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/20 lg:bg-gradient-to-r lg:from-transparent lg:to-white" />
+              <div className="absolute inset-0 bg-white/10 lg:bg-white/25" />
             </FadeIn>
 
-            <div className="relative bg-gradient-to-br from-accent/80 via-white to-secondary/50 p-8 sm:p-12">
+            <div className="relative bg-white p-8 sm:p-12">
               <div className="pointer-events-none absolute -right-16 -top-16 size-48 rounded-full bg-fresh/15 blur-3xl" />
 
               <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary">
